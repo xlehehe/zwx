@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10">
+
+
+    <ImageView
+        android:id="@+id/iv_module"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_collection_account_setting"
+        android:scaleType="fitXY"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_module_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_gray_deep"
+        android:textSize="@dimen/font_size_12"
+        android:text="会员卡员工销售报表"
+        android:lines="2"
+        android:gravity="center|top|left"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"/>
+
+</LinearLayout>

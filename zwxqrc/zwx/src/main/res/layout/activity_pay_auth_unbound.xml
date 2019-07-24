@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/divide_gray_color"
+    tools:context=".feature.personal.PayAuthUnboundActivity">
+
+    <include layout="@layout/layout_common_title"/>
+    <include layout="@layout/layout_line_horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="开户名"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:gravity="center|right"
+                android:hint=""
+                android:text="王建国"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/layout_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="银行卡号"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_bank_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:gravity="center|right"
+                android:hint=""
+                android:text="6602 8976 8979 6546 908"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/layout_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="开户行"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:gravity="center|right"
+                android:hint=""
+                android:text="高新区第二分行"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/layout_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="银行预留手机号"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_bank_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:gravity="center|right"
+                android:hint=""
+                android:text="15706411161"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_unbound"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_42"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:background="@drawable/shape_btn_blue_corner"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="解绑银行卡"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+
+
+
+
+</LinearLayout>

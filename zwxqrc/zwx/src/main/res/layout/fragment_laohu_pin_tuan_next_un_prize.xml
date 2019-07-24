@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_un_prize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="如果需要设置多个数量奖项，请在编辑中进行增减"
+            android:textColor="@color/color_gray_deep"
+            android:textSize="@dimen/font_size_14"
+            android:paddingTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawablePadding="@dimen/margin_10"/>
+
+        <include layout="@layout/layout_line_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+          >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当会员未中奖时，你想用什么图片展示出来"
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14"
+
+                android:layout_marginBottom="@dimen/margin_10"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:overScrollMode="never"
+                    android:layout_toLeftOf="@id/tv_photo_num"/>
+
+                <TextView
+                    android:id="@+id/tv_photo_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1/6)"
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/rv_photo"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="注：当会员未中奖时，游戏中将展示，这里设置的图片"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/font_size_12"
+
+                android:layout_marginBottom="@dimen/margin_10"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin_10"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

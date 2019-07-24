@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_clear_black" />
+
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="填写手机号验证码"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_blue_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1"
+                android:background="#E2E8F0"/>
+
+            <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+            <LinearLayout
+                android:id="@+id/optionspicker"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_verification_code_gray_bound"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/margin_1"
+                >
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+                <EditText
+                    android:id="@+id/edt_code1"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_code2"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+
+                <EditText
+                    android:id="@+id/edt_code2"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_code3"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:maxLength="1"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+
+                <EditText
+                    android:id="@+id/edt_code3"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:hint=""
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_code4"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+                <EditText
+                    android:id="@+id/edt_code4"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_code5"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+                <EditText
+                    android:id="@+id/edt_code5"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_code6"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+                <EditText
+                    android:id="@+id/edt_code6"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/height_50"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:numeric="integer"
+                    android:digits="0123456789"
+                    android:nextFocusForward="@id/edt_pos_id"
+                    android:padding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14"
+                    />
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_verification_code_line_verificate"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_code_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_42"
+                android:layout_marginLeft="@dimen/margin_40"
+                android:layout_marginRight="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:background="@drawable/shape_btn_blue_corner"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

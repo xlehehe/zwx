@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.countanalysis.member.MemberAnalysisActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/ic_line_horizontal"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_analysis_select_store"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="当前店铺新增会员总数"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_new_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="@dimen/font_size_20"
+                    android:textColor="@color/font_color_blue"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="当前新增会员情况"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+                <com.zwx.scan.app.widget.SegmentControl
+                    android:id="@+id/segment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:scv_BackgroundSelectedColor="@color/font_color_blue"
+                    app:scv_FrameColor="@color/font_color_blue"
+                    app:scv_FrameCornerRadius="6dp"
+                    app:scv_FrameWidth="1dp"
+                    app:scv_Gradient="true"
+                    app:scv_SegmentPaddingVertical="5dp"
+                    app:scv_TextArray="@array/app_array"
+                    app:scv_TextNormalColor="@color/color_gray_deep"
+                    />
+                <include layout="@layout/layout_chart"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="当前店铺各个会员卡情况"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:paddingTop="@dimen/margin_10"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/divide_gray_color">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <include layout="@layout/layout_line_horizontal"
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/view_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_auth_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="会员手机号"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_good_manage_xing"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/tv_auth_name_label"
+                    android:layout_marginLeft="@dimen/margin_10"/>
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_50"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="92dp"
+                    android:background="@color/white"
+                    android:gravity="right|center"
+                    android:hint="请输入成为会员时注册的手机号"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:digits="0123456789"
+                    android:numeric="integer"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/edt_id_card"
+
+                    android:paddingLeft="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_horizontal" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_id_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="会员姓名"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_good_manage_xing"
+                    android:layout_toRightOf="@id/tv_id_label"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/margin_10"/>
+
+
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_50"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="92dp"
+                    android:background="@color/white"
+                    android:gravity="right|center"
+                    android:hint="请输入会员的姓名"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/tip"
+
+                    android:paddingLeft="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注："
+                android:textColor="#BCBCBC"
+                android:textSize="@dimen/font_size_14"
+                android:layout_gravity="top"/>
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="@string/collect_money_account_setting_wx_desc"
+                android:textColor="#BCBCBC"
+                android:textSize="@dimen/font_size_14"
+                android:lineSpacingExtra="@dimen/margin_8"
+                android:textScaleX="1.0"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/view_line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@drawable/ic_line_horizontal"
+            android:layout_alignParentTop="true"/>
+        <Button
+            android:id="@+id/btn_effect"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_42"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="保存并生效"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

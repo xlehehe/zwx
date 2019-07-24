@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_5"
+    android:background="@drawable/ic_count_analysis"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_campaign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/margin_5"
+        android:background="@drawable/ic_analysis_campaign">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="员工拉新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"
+            android:paddingLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/tv_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activities"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:gravity="center"
+            android:layout_below="@id/tv_title"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="会员"
+        android:textColor="@color/color_gray_deep"
+        android:textSize="@dimen/font_size_14"/>
+
+</LinearLayout>

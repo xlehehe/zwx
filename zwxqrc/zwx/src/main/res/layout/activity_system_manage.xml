@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.personal.SystemManageActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <include layout="@layout/layout_line_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/padding_10"
+        android:background="@color/white">
+
+       <!-- <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:text="@string/clear_cache"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_deep"
+            android:paddingLeft="@dimen/margin_20"
+            android:gravity="center|left"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"/>-->
+
+        <!--<include layout="@layout/layout_line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_10"/>
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/exit_account"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_deep"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/margin_20"
+            android:background="@color/white"
+            android:layout_below="@id/tv_clear"/>-->
+     <!--   <include layout="@layout/layout_line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_10"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:text="@string/software_version"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"
+                android:gravity="center|left"
+                android:background="@color/white"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_50"
+                android:text="v1.2"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"
+                android:gravity="center|left"
+                android:background="@color/white"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+<!--
+        <ImageView
+            android:id="@+id/iv_qrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_qrc"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_20"
+            android:text="@string/qrc_download"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/shop_font_color_gray"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_below="@id/iv_qrc"/>-->
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:background="@drawable/ic_btn_bg"
+            android:layout_marginBottom="@dimen/margin_70"
+            android:text="@string/exit_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/layout_common_select_more"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="整体情况统计"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:padding="@dimen/margin_10">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"/>
+
+
+
+                </RelativeLayout>-->
+                <include layout="@layout/layout_campaign_detail_list_top"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="优惠券整体情况"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+                <include layout="@layout/item_campaign_coupon_list_title"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_coupon_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"/>
+
+                    <TextView
+                        android:id="@+id/tv_no_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="暂无数据"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="整体活动趋势"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+                <!--<com.zwx.library.tablayout.SegmentTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    app:tl_bar_color="#ffffff"
+                    app:tl_indicator_color="#0486FE"
+                    app:tl_indicator_corner_radius="8dp"
+                    app:tl_tab_width="80dp"
+                    app:tl_tab_padding="10dp"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />-->
+
+                <com.zwx.scan.app.widget.SegmentControl
+                    android:id="@+id/segment"
+                    android:layout_width="300dp"
+                    android:layout_height="@dimen/height_35"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:scv_BackgroundSelectedColor="@color/font_color_blue"
+                    app:scv_FrameColor="@color/font_color_blue"
+                    app:scv_FrameCornerRadius="6dp"
+                    app:scv_FrameWidth="1dp"
+                    app:scv_Gradient="true"
+                    app:scv_SegmentPaddingVertical="5dp"
+                    app:scv_TextArray="@array/app_array"
+                    app:scv_TextNormalColor="@color/color_gray_deep"
+                    />
+
+                <com.zwx.library.tablayout.SlidingTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    tl:tl_indicator_margin_left="2dp"
+                    tl:tl_indicator_margin_right="2dp"
+                    tl:tl_indicator_style="BLOCK"
+                    tl:tl_indicator_anim_enable="true"
+                    tl:tl_indicator_bounce_enable="false"
+                    tl:tl_textUnselectColor="@color/color_gray_deep"
+                    tl:tl_textSelectColor="@color/white"
+                    tl:tl_indicator_color="@color/btn_color_blue"
+                    />
+
+               <!-- <LinearLayout
+                    android:id="@+id/ll_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tv_chart_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center|left"
+                        android:text="优惠券领取数量趋势"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_16"/>
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="(2018/11/17-2018/11/17)"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14"/>
+
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_20"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/ll_left"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true">
+
+
+                        <TextView
+                            android:id="@+id/tv_chart_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center|left"
+                            android:text="核销桌数趋势"
+                            android:textColor="@color/color_gray_dark"
+                            android:textSize="@dimen/font_size_15"
+                            android:typeface="serif"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="(2018/11/17-2018/11/17)"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_12"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="01"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignBottom="@+id/ll_left"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:visibility="invisible">
+
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:gravity="center"
+                            android:background="@color/font_color_blue"
+                            android:layout_marginRight="@dimen/margin_5"/>
+                        <TextView
+                            android:id="@+id/tv_legend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="新增数"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_12"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <com.zwx.library.banner.view.CustomViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"/>
+                <LinearLayout
+                    android:id="@+id/dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_below="@+id/rv_checkbox"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

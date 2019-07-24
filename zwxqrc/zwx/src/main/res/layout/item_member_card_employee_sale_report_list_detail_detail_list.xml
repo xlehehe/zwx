@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5">
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/margin_1"
+              android:background="@drawable/ic_line_horizontal"/>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="销售时间："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="298dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="—"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="数量："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="—"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@drawable/ic_line_horizontal"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_10"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_sale_amt_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="销售金额："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_sale_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="—"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_red_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="红包抵现金额："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_red_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="—"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+       <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10">
+            <LinearLayout
+                android:id="@+id/ll_sale_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_sale_total_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="销售数："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_sale_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="—"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="销售对象手机号："
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:text="—"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"/>
+            </LinearLayout>
+
+         <!--   <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"/>-->
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

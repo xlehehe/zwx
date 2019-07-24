@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/divide_gray_color">
+
+    <include layout="@layout/layout_common_title" />
+
+    <include layout="@layout/layout_line_horizontal" />
+
+
+
+   <!-- <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0">-->
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_label_left"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:text="会员基础信息"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_16"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_birthday_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="会员姓名"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_phone_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="会员手机号"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_sex_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="性别"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="会员卡"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                    <TextView
+                        android:id="@+id/tv_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:gravity="center"
+                        android:hint="请选择会员卡"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:text="消费记录"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16" />
+            <com.zwx.scan.app.widget.MyListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/divide_gray_color"
+                android:dividerHeight="@dimen/margin_10"
+                android:layout_margin="@dimen/margin_10"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/height_50">
+
+                <ImageView
+                    android:id="@+id/iv_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_no_data_tip"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无活动"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_20"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

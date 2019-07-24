@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.campaign.CampaignTitleContentActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white">
+        <com.zwx.scan.app.widget.ContainsEmojiEditText
+            android:id="@+id/edt_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:textColor="@color/color_gray_dark"
+            android:text=""
+            android:textSize="@dimen/font_size_14"
+            android:maxLength="45"
+            android:maxLines="4"
+
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_5"
+            android:gravity="top"/>
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30"
+            android:text="(0/45)"
+            android:textColor="#8E939A"
+            android:textSize="15sp"
+            android:gravity="center|right"
+            android:paddingRight="@dimen/margin_15"/>
+
+    </LinearLayout>
+
+</LinearLayout>

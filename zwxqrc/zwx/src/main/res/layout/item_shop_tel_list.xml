@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/rl"
+    >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_margin="10dp"
+        android:text=""
+        android:textColor="@color/color_gray_deep"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:gravity="center|left"
+        android:layout_marginRight="120dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+    <EditText
+        android:id="@+id/edt_tel"
+        android:layout_width="120dp"
+        android:layout_height="@dimen/height_50"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="right|center"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:hint="请设置联系电话"
+        android:imeOptions="actionNext"
+        android:inputType="textPhonetic"
+        android:digits="0123456789-"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/font_color_gray_dark"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/font_size_14"
+        android:layout_marginRight="@dimen/margin_10"/>
+
+
+
+</RelativeLayout>

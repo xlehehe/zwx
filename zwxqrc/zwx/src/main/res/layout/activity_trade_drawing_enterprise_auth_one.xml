@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/divide_gray_color"
+    tools:context=".feature.personal.TradeDrawingPersonalAuthOneActivity">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <include layout="@layout/layout_line_horizontal"
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_top"/>
+
+    <include layout="@layout/layout_trade_drawing_step"
+        android:id="@+id/top_step"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/view_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_step"
+        android:layout_marginBottom="@dimen/width_65">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/view_line">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_auth_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="企业名称"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/tv_auth_name_label"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_enterprise_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="92dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入企业名称"
+                        android:imeOptions="actionNext"
+                        android:inputType="textFilter"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_credit_code"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_business_license_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/company_zhizhao"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_business_license_label"
+                        android:layout_centerInParent="true"
+
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <!-- <TextView
+                         android:id="@+id/tv_id_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="50dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerInParent="true"
+                         android:layout_marginLeft="180dp"
+                         android:gravity="center|right"
+                         android:hint="身份证"
+                         android:text=""
+                         android:textColor="@color/color_gray_deep"
+                         android:textSize="@dimen/font_size_14" />-->
+
+                    <ImageView
+                        android:id="@+id/iv_business_license"
+                        android:layout_width="@dimen/margin_100"
+                        android:layout_height="@dimen/margin_100"
+                        android:src="@drawable/ic_add_pic"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_credit_code_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="统一社会信用代码"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_credit_code_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_credit_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="135dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入统一社会信用代码"
+                        android:imeOptions="actionNext"
+                        android:inputType="textFilter|text"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_legal_person"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_legal_person_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="法人姓名"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_legal_person_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_legal_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="135dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入法人姓名"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textFilter"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_legal_phone"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_legal_phone_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="法人手机号"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_legal_phone_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_legal_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="135dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入法人手机号"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_legal_id_num"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_legal_id_num_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="法人身份证"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_legal_id_num_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_legal_id_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="135dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入法人身份证"
+                        android:imeOptions="actionNext"
+                        android:inputType="textFilter"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_duigong_account"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+
+
+                    <ImageView
+                        android:id="@+id/iv_id_num_zheng"
+                        android:layout_width="148dip"
+                        android:layout_height="94dip"
+                        android:src="@drawable/ic_id_card_zheng"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                    <ImageView
+                        android:id="@+id/iv_id_num_fan"
+                        android:layout_width="148dip"
+                        android:layout_height="94dip"
+                        android:src="@drawable/ic_id_card_fan"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_duigong_account_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="对公账户"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_duigong_account_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <EditText
+                        android:id="@+id/edt_duigong_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="92dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入对公账户"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:numeric="integer"
+                        android:maxLength="19"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_bank_name"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_bank_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="开户行名称"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_good_manage_xing"
+                    android:layout_toRightOf="@id/tv_bank_name_label"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/margin_10"/>
+
+
+                    <EditText
+                        android:id="@+id/edt_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="92dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请输入开户行名称"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/edt_pos_id"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/tv_bank_address_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="开户行地址"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_bank_address_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_province_city_dist"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="92dp"
+                        android:background="@color/white"
+                        android:gravity="right|center"
+                        android:hint="请选择开户行地址"
+
+                        android:paddingLeft="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_20">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注："
+                        android:textColor="#BCBCBC"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_gravity="top"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/trade_drawing_enterprise_desc"
+                        android:textColor="#BCBCBC"
+                        android:textSize="@dimen/font_size_14"
+                        android:lineSpacingExtra="@dimen/margin_5"
+                        android:textScaleX="1.1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/view_line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@drawable/ic_line_horizontal"
+            android:layout_alignParentTop="true"/>
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_42"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.campaign.LaohuPinTuanNextTwoFragment">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_10">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="如果需要设置多个条件,请在编辑中进行增减"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_14"
+
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:drawableLeft="@drawable/ic_warning"
+                            android:drawablePadding="@dimen/margin_10"/>
+                        <include layout="@layout/layout_line_horizontal"/>
+                        <TextView
+                            android:id="@+id/tv_day_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="发放条件"
+                            android:textColor="@color/color_gray_light"
+                            android:textSize="@dimen/font_size_14"
+                            android:layout_marginBottom="@dimen/margin_10"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/ll_monetary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:focusableInTouchMode="false"
+                                android:focusable="false">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/margin_50"
+                                    android:text="消费金额超过"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_14"
+
+                                    android:layout_marginBottom="@dimen/margin_10"
+                                    android:gravity="center|right"
+                                    android:paddingLeft="@dimen/margin_10"/>
+                                <EditText
+                                    android:id="@+id/edt_money"
+                                    android:layout_width="160dp"
+                                    android:layout_height="@dimen/height_45"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_marginRight="@dimen/margin_10"
+                                    android:layout_marginBottom="@dimen/margin_10"
+                                    android:text=""
+                                    android:hint="请输入消费金额"
+                                    android:background="@drawable/shape_gray_corner"
+                                    android:paddingLeft="@dimen/margin_10"
+                                    android:paddingRight="@dimen/margin_10"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:digits="1234567890"
+                                    android:numeric="integer"
+                                    android:maxLines="1"
+                                    android:textSize="@dimen/font_size_14"
+                                    android:gravity="center"
+                                    android:nextFocusForward="@id/edt_day_two"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/margin_50"
+                                    android:text="元"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_14"
+
+                                    android:layout_marginBottom="@dimen/margin_10"
+                                    android:gravity="center|left"
+                                    android:paddingLeft="@dimen/margin_10"/>
+
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/consume_coupon_tip"
+                                android:textColor="@color/color_red"
+                                android:textSize="@dimen/font_size_14"
+
+                                android:layout_marginBottom="@dimen/margin_10"
+                                android:gravity="center|left|bottom"
+                                android:paddingLeft="@dimen/margin_10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_5"
+                                    android:gravity="center|left"
+                                    android:text="超过几天未消费的会员"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <TextView
+                                    android:id="@+id/tv_valid_days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|left"
+                                    android:text="当"
+                                    android:textColor="#0087FF"
+                                    android:textSize="@dimen/font_size_14"
+                                    android:layout_toLeftOf="@id/tv_valid_days_label"
+                                    android:layout_centerInParent="true"/>
+                                <TextView
+                                    android:id="@+id/tv_valid_days_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_5"
+                                    android:gravity="center|left"
+                                    android:text="天"
+                                    android:textColor="@color/color_gray"
+                                    android:textSize="@dimen/font_size_14"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_top"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true">
+
+                                <ImageView
+                                    android:id="@+id/iv_left_subtract"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/ic_gray_unsubtract" />
+
+                                <EditText
+                                    android:id="@+id/edt_day"
+                                    android:layout_width="200dp"
+                                    android:layout_height="@dimen/height_40"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_marginRight="@dimen/margin_10"
+                                    android:layout_marginBottom="@dimen/margin_10"
+                                    android:text="0"
+                                    android:background="@drawable/shape_gray_corner"
+                                    android:paddingLeft="@dimen/margin_10"
+                                    android:paddingRight="@dimen/margin_10"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:numeric="integer"
+                                    android:maxLines="1"
+                                    android:gravity="center"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_right_add"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/ic_blue_added" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_below="@id/step_view_two">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tv_consume_panda_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="请问你想给满足条件的会员，赠送什么优惠券"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_14"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_10"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_add_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_consume"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_give_coupon_panda_s"
+                                android:layout_marginTop="@dimen/margin_20"/>
+
+                            <Button
+                                android:id="@+id/btn_add_coupon"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_42"
+                                android:layout_marginLeft="@dimen/margin_40"
+                                android:layout_marginRight="@dimen/margin_40"
+                                android:background="@drawable/shape_btn_blue_corner"
+                                android:layout_marginTop="@dimen/margin_40"
+                                android:text="添加优惠券"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_16"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--优惠券-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bottom_coupon_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            >
+
+                            <com.zwx.library.banner.view.CustomViewPager
+                                android:id="@+id/coupon_view_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:paddingRight="@dimen/margin_15"
+                                android:paddingLeft="@dimen/margin_15"
+                                android:clipToPadding="false"/>
+
+
+                            <LinearLayout
+                                android:id="@+id/dots"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="@dimen/margin_10"
+                                android:layout_below="@+id/coupon_view_pager">
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <com.zwx.scan.app.widget.NoScrollViewPager
+                            android:id="@+id/setting_view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="700dp"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="220dp"
+            android:background="@drawable/ic_new_coupon"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+</LinearLayout>

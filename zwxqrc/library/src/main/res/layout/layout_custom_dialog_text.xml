@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogui_shape_wihte_round_corner"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_margin="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#BB000000"
+        android:shadowRadius="2.75"
+        android:textColor="#333333"
+        android:text="扫码成功"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        android:gravity="center"
+        />
+
+</LinearLayout>

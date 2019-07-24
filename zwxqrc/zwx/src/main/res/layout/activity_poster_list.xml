@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.campaign.PosterListActivity"
+    android:background="@color/white">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/layout_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include layout="@layout/layout_line_horizontal" />
+
+
+    <include layout="@layout/layout_step_view"
+        android:id="@+id/step_view_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:layout_centerInParent="true"/>
+  <!--  <TextView
+        android:id="@+id/tv_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="转发活动内容设置"
+        android:textColor="@color/color_gray_dark"
+        android:textSize="@dimen/font_size_14"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_below="@id/step_view_four"
+        android:paddingLeft="@dimen/margin_10"/>-->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/step_view_four"
+        android:background="@color/white"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+
+                    android:layout_marginTop="@dimen/margin_10">
+                    <TextView
+                        android:id="@+id/tv_forward_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转发标题"
+                        android:textSize="15sp"
+                        android:textColor="@color/color_gray_dark"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_forward_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[点我玩，获优惠]点我就拿优惠，这个机会你不能错"
+                        android:hint=""
+                        android:singleLine="false"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="70dp"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_10">
+                    <TextView
+                        android:id="@+id/tv_forward_content_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转发内容"
+                        android:textSize="15sp"
+                        android:textColor="@color/color_gray_dark"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_forward_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="亲，动动手指，点我参加活动，免费领取奖品吧。"
+                        android:hint=""
+                        android:singleLine="false"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="70dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ll_poster"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:text="请选择你想转发的海报"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16" />
+
+                <com.zwx.scan.app.widget.MyGridView
+                    android:id="@+id/rv_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:columnWidth="100dp"
+
+                    android:stretchMode="columnWidth"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/view_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@drawable/ic_line_horizontal"
+        android:layout_above="@id/ll_bottom"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/margin_20"
+        android:paddingLeft="@dimen/margin_20">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_42"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="@drawable/shape_btn_blue_corner"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_save_and_public"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_42"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@drawable/shape_btn_blue_corner"
+                    android:text="保存并发布"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_pre"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_42"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/shape_btn_blue_stroke"
+                    android:text="上一步"
+                    android:textColor="@color/btn_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

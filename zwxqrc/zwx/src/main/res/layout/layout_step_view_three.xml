@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_10">
+
+    <ImageView
+        android:id="@+id/iv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_first_clicked"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/iv_ellipsis_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipsis_gray"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"/>
+    <ImageView
+        android:id="@+id/iv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_two_clicked"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/iv_ellipsis_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipsis_gray"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"/>
+
+    <ImageView
+        android:id="@+id/iv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_three_clicked"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

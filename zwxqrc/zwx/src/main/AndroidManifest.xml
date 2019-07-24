@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zwx.scan.app"
+    android:versionCode="10"
+    android:versionName="1.1.0">
+
+    <!--<uses-sdk
+        android:targetSdkVersion="28" />-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name=" android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <!--
+     Android9.0以上默认不支持http通信，为保证SDK正常使用
+    <application android:usesCleartextTraffic="true">
+
+    扩大内存
+      android:largeHeap="true"
+        android:hardwareAccelerated="true"
+    -->
+    <protected-broadcast android:name="android.intent.action.SHOW_MISSED_CALLS_NOTIFICATION" />
+
+    <application
+        android:name=".feature.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+      >
+        <activity android:name=".feature.financialaffairs.MemCardEmploeeSaleReportDetailListActivity"/>
+        <activity android:name=".feature.financialaffairs.MemCardEmploeeSaleReportDetailActivity" />
+        <activity android:name=".feature.financialaffairs.MemCardEmploeeSaleReportActivity" /> <!-- 地图配置开始 -->
+        <!-- 处理Glide 图片多大加载不出来问题 -->
+      <!--  <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="adf65a2e57f3f919c23ae6dfd18b8c3c" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <provider
+            android:name=".widget.webview.UploadFileProvider"
+            android:authorities="com.zwx.scan.app.widget.webview.UploadFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".feature.welcome.SplashActivity"
+            android:theme="@style/AppWelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.welcome.GuideActivity"
+            android:theme="@style/AppWelcome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".feature.user.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".feature.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.verification.VerificationActivity"
+            android:screenOrientation="portrait" /> <!-- 个推sdk核心服务 -->
+        <!--
+            <service
+            android:name=".service.GeTuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        -->
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+        <!-- <service android:name=".service.GeTuiIntentService" /> -->
+        <activity
+            android:name=".feature.verificationrecord.VerificationRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.verificationrecord.VerificationRecordDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.countanalysis.CountAnalysisHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.countanalysis.campaign.CampaignAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.countanalysis.campaign.CampaignAnalysisDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.countanalysis.member.MemberAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.countanalysis.member.MemberAnalysisDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.countanalysis.staffreward.StaffRewardAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.modulemore.ModuleMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.staffmanage.StaffListActivity"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".feature.staffmanage.StaffEditActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.member.MemberConsumeListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.member.MemberConsumeListDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.member.MemberInfoListActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.member.MemberInfoDetailActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".feature.campaign.CampaignListActivity" /> -->
+        <activity android:name=".feature.campaign.CampaignListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".feature.campaign.CampaignListTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.campaign.CampaignNewActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+            <activity
+            android:name=".feature.campaign.CampaignNewNextActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        -->
+        <activity android:name=".feature.campaign.CampaignCouponListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.campaign.CampaignNewNextTwoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.campaign.PosterListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".feature.campaign.CampaignNewNextThreeActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.campaign.CampaignTitleContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.personal.PersonalAccountManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.personal.SystemManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.personal.MessageListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.personal.PasswordManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.personal.MessageListDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.cateringinfomanage.CateringinfoManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.accountmanage.AccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".feature.cateringinfomanage.BrandSettingActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.cateringinfomanage.StoreInfoManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.cateringinfomanage.StoreInfoParameterSelectorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".feature.accountmanage.AccountNewActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.accountmanage.AccountRoleAuthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.couponmanage.GiveCouponManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".feature.couponmanage.GiveCouponNewActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.couponmanage.GiveCouponNewNextActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.countanalysis.campaign.GiveAnalysisActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.countanalysis.campaign.GiveAnalysisDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/> <!-- 文件上传 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yf.useravatar"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".feature.contractmanage.ContractActivity" />
+        <activity android:name=".feature.contractmanage.ContractListActivity" />
+        <activity android:name=".feature.campaign.LaohuPinTuanNewActivity" />
+        <activity android:name=".feature.campaign.LaohuPinTuanNextTwoActivity" />
+        <activity android:name=".feature.campaign.LaohuPinTuanNextThreeActivity" />
+        <activity android:name=".feature.campaign.LaohuPinTuanPrizeListActivity" />
+        <activity android:name=".feature.campaign.PrizeTempletActivity" />
+        <activity android:name=".feature.financemanage.PayFeeManageActivity" />
+        <activity android:name=".feature.financemanage.PayFeeListDetailActivity" />
+        <activity android:name=".feature.ptmanage.PtManageActivity" />
+        <activity android:name=".feature.ptmanage.PtOrderActivity" />
+        <activity android:name=".feature.ptmanage.PtNewActivity" />
+        <activity
+            android:name=".feature.ptmanage.PtNextTwoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".feature.ptmanage.PtNextThreeActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".feature.campaign.LhgeNextTwoActivity" />
+        <activity android:name=".feature.countanalysis.campaign.PinTuanAnalysisActivity" />
+        <activity android:name=".feature.countanalysis.campaign.PinTuanAnalysisDetailActivity" />
+        <activity android:name=".feature.ptmanage.PtOrderDetailActivity" />
+        <activity android:name=".feature.couponmanage.CouponManageActivity" />
+        <activity android:name=".feature.couponmanage.CouponNewActivity" />
+        <activity android:name=".feature.campaign.LaoHuTempletActivity" />
+        <activity android:name=".feature.couponmanage.GiveCouponNewNextConsumeActivity" />
+        <activity android:name=".feature.couponmanage.GiveCouponConsumeConditionTagActivity" />
+        <activity android:name=".feature.personal.FeedBackActivity" />
+        <activity android:name=".feature.personal.FeedBackListActivity" />
+        <activity android:name=".feature.personal.FeedBackDetailActivity" />
+        <activity android:name=".feature.staffmanage.PullQrcManageActivity" />
+        <activity android:name=".feature.staffmanage.PullQrcSelectContentActivity" />
+        <activity android:name=".feature.member.MemberCardManageActivity" />
+        <activity android:name=".feature.member.MemberCardNewActivity" />
+        <activity android:name=".feature.member.MemberCardNewTwoActivity" />
+        <activity android:name=".feature.member.MemberCardStreamActivity" />
+        <activity android:name=".feature.member.MemberCardStreamDetailActivity" />
+        <activity android:name=".feature.campaign.MemberInfoPerfectNewActivity" />
+        <activity android:name=".feature.campaign.MemberInfoPerfectNextTwoActivity" />
+        <activity android:name=".feature.campaign.CampaignLikeNewActivity" />
+        <activity android:name=".feature.campaign.CampaignLikeTwoActivity" />
+        <activity android:name=".feature.campaign.CampaignLikeThreeActivity" />
+        <activity android:name=".feature.poster.PosterManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".feature.poster.WebViewActivity"/>
+
+        <activity android:name=".feature.poster.PosterMaterListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.shop.ShopSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.shop.ShopManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.shop.ShopOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.shop.ShopOrderDetailActivity" />
+        <activity android:name=".feature.shop.ShopManageNewActivity" />
+        <activity android:name=".feature.shop.RedEnvelopeActivity" />
+        <activity android:name=".feature.shop.RedEnvelopeDetailActivity" />
+        <activity android:name=".feature.shop.SearchRedEnvelopeListActivity" />
+        <activity android:name=".feature.verification.ProductVerificationActivity" />
+        <activity android:name=".feature.shop.ProductVerificationRecordActivity" />
+        <activity android:name=".feature.shop.ProductVerificationRecordDetailActivity" />
+        <activity android:name=".feature.financialaffairs.TradeDrawingCollectionFlowListActivity" />
+        <activity android:name=".feature.financialaffairs.TradeDrawingCollectionFlowDetailActivity" />
+        <activity android:name=".feature.personal.TradeDrawingAuthActivity" />
+        <activity android:name=".feature.financialaffairs.TradeDrawingActivity" />
+        <activity android:name=".feature.financialaffairs.TradeDrawingRecordActivity" />
+        <activity android:name=".feature.personal.TradeDrawingPersonalAuthOneActivity" />
+        <activity android:name=".feature.personal.TradeDrawingPersonalAuthTwoActivity" />
+        <activity android:name=".feature.personal.TradeDrawingPersonalAuthThreeActivity" />
+        <activity android:name=".feature.personal.TradeDrawingEnterpriseAuthOneActivity" />
+        <activity android:name=".feature.personal.PayAuthComplateActivity" />
+        <activity android:name=".feature.personal.PayAuthPhoneActivity" />
+        <activity android:name=".feature.personal.PayAuthUnboundActivity" />
+        <activity android:name=".feature.personal.PayAuthInfoActivity" />
+        <activity android:name=".feature.personal.TradeDrawingEnterpriseAuthTwoActivity" />
+        <activity android:name=".feature.personal.PayAuthNoComplateActivity" />
+        <activity android:name=".feature.financialaffairs.FinancialDrawingActivity" />
+        <activity android:name=".feature.financialaffairs.FinancialDrawingDetailActivity" />
+        <activity android:name=".feature.personal.PayAuthAgreeActivity" />
+        <activity android:name=".feature.personal.TradeDrawingEnterpriseInfoActivity" />
+        <activity android:name=".feature.financialaffairs.CollectionFlowListActivity" />
+        <activity android:name=".feature.financialaffairs.CollectionMoneyAccountSettingActivity" />
+        <activity android:name=".feature.financialaffairs.CollectionMoneyIntoAccountListActivity" />
+        <activity android:name=".feature.financialaffairs.CollectionMoneyAccountBankActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionWxNoEffectiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionBankNoEffectiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionSelectBankNameListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionToAccountOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionTransferRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.financialaffairs.CollectionTransferRecordDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".feature.modulemore.ModuleMoreListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+    </application>
+
+</manifest>

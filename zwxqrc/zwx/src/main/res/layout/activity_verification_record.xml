@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.verificationrecord.VerificationRecordActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        >
+        <include layout="@layout/layout_common_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/ic_line_horizontal" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        android:layout_below="@id/ll_top"
+        android:layout_marginBottom="@dimen/height_45">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_select_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品牌店铺名称"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_16"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="sans-serif"
+                        android:typeface="serif"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_select_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="选择查看店铺"
+                        android:textColor="@color/font_color_blue"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentRight="true"
+                        android:typeface="serif"
+                        android:textStyle="normal"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_store_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_20">
+
+
+
+                    <ImageView
+                        android:id="@+id/iv_brand"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_logo_default"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_brand"
+                        android:layout_marginLeft="@dimen/margin_10">
+
+                      <!--  <com.zwx.scan.app.widget.MoreTextView
+                            android:id="@+id/tv_store_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_16"
+                            android:minLines="1"
+                            android:singleLine="false"
+                            app:expand="false"
+                            app:maxLine="1"
+                            app:mytextSize="15sp"
+                            app:text=""/>-->
+                        <com.zwx.scan.app.widget.PhilExpandableTextView
+                            android:id="@+id/tv_store_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/white"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_15"
+                            android:maxLines="5"
+                            android:minLines="3"
+                            android:text=""
+                            android:gravity="center|left"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_down"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_weight="8"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="@string/veri_record_sum"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+              <!--  <com.zwx.library.tablayout.SegmentTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:tl_bar_color="#ffffff"
+                    app:tl_indicator_color="#0486FE"
+                    app:tl_indicator_corner_radius="8dp"
+                    app:tl_tab_width="80dp"
+                    app:tl_tab_padding="10dp"/>
+
+                <FrameLayout
+                    android:id="@+id/fl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />-->
+                <com.zwx.scan.app.widget.SegmentControl
+                    android:id="@+id/segment"
+                    android:layout_width="300dp"
+                    android:layout_height="@dimen/height_35"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.64"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:scv_BackgroundSelectedColor="@color/font_color_blue"
+                    app:scv_FrameColor="@color/font_color_blue"
+                    app:scv_FrameCornerRadius="6dp"
+                    app:scv_FrameWidth="1dp"
+                    app:scv_Gradient="true"
+                    app:scv_SegmentPaddingVertical="5dp"
+                    app:scv_TextArray="@array/app_array"
+                    app:scv_TextNormalColor="@color/color_gray_deep"
+                    />
+                <include layout="@layout/layout_verification_record_report"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/margin_5">
+
+                <TextView
+                    android:id="@+id/tv_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="@string/veri_record_situation"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+                <include layout="@layout/item_verification_record_list_title"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:scrollbars="none"/>
+                    <include layout="@layout/layout_analysis_no_data_tip"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/tv_record_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看核销详细记录"
+            android:textColor="@color/font_color_blue"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_10"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:drawablePadding="@dimen/margin_10"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

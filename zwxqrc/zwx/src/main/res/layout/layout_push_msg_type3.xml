@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_push_three"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_pt_time3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        android:text="2019年2月28日 上午10:16"
+        android:textColor="@color/color_gray_light"
+        android:textSize="@dimen/font_size_8" />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+            <TextView
+                android:id="@+id/tv_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员特权使用通知"
+                android:textSize="12sp"
+                android:textColor="@color/color_gray_dark"
+
+                android:paddingLeft="@dimen/margin_10"
+                android:gravity="center|left"
+                android:layout_alignParentLeft="true"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_push_msg_dot"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_10"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_push_time3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12月23日"
+            android:textSize="12sp"
+            android:textColor="#909399"
+            android:layout_marginTop="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:gravity="center|left"/>
+        <TextView
+            android:id="@+id/tv_first3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您有一个新的会员特权待领取"
+            android:textSize="11dp"
+            android:textColor="@color/color_gray_dark"
+            android:layout_marginTop="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:singleLine="false"
+            android:gravity="center|left"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5">
+            <TextView
+                android:id="@+id/tv_member_tequan_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员特权："
+                android:textSize="12sp"
+                android:textColor="@color/color_gray_dark"
+
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:id="@+id/tv_memebr_tequan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="高级vip会员卡"
+                android:textSize="11dp"
+                android:textColor="@color/color_gray_deep"
+                android:maxLines="4"
+                android:layout_toRightOf="@id/tv_member_tequan_label"
+                android:layout_marginTop="@dimen/padding_17"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5">
+            <TextView
+                android:id="@+id/tv_member_card_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员卡号："
+                android:textSize="12sp"
+                android:textColor="@color/color_gray_dark"
+
+                android:paddingLeft="@dimen/margin_10"
+                android:gravity="center|left"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:id="@+id/tv_member_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="11dp"
+                android:textColor="@color/color_gray_deep"
+                android:layout_toRightOf="@id/tv_member_card_label"
+                android:layout_marginTop="@dimen/padding_17"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5">
+            <TextView
+                android:id="@+id/tv_consume_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费时间："
+                android:textSize="12sp"
+                android:textColor="@color/color_gray_dark"
+
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:id="@+id/tv_consume_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="11dp"
+                android:textColor="@color/color_gray_deep"
+                android:singleLine="true"
+                android:layout_toRightOf="@id/tv_consume_time_label"
+                android:layout_marginTop="@dimen/padding_17"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_push_desc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲爱的顾客，点我去享受新的会员权益吧！"
+            android:textSize="12sp"
+            android:textColor="@color/color_gray_dark"
+
+            android:paddingLeft="@dimen/margin_10"
+            android:gravity="center|left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/margin_10"/>
+
+        <include layout="@layout/layout_line_horizontal"/>
+        <RelativeLayout
+            android:id="@+id/rl_detail3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+            <TextView
+                android:id="@+id/tv_detail_label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详情"
+                android:textSize="@dimen/font_size_12"
+                android:textColor="@color/color_gray_deep"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_detail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint=""
+                android:textSize="@dimen/font_size_12"
+                android:textColor="@color/color_gray_deep"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/ic_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingRight="@dimen/margin_10"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

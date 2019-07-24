@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/line_color_gray"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="#F8F8F8">
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/line_color_gray"/>
+    <TextView
+        android:id="@+id/tv_pay_date"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/pay_day"
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/color_gray_deep"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/line_color_gray"/>
+    <TextView
+        android:id="@+id/tv_pay_money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/pay_money"
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/color_gray_deep"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/line_color_gray"/>
+    <TextView
+        android:id="@+id/tv_is_pay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/is_pay"
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/color_gray_deep"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/line_color_gray"/>
+
+</LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/line_color_gray"/>
+
+</LinearLayout>

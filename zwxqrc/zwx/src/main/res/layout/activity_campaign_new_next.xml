@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.campaign.CampaignNewNextActivity">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top">
+        <com.zwx.scan.app.widget.CustomScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_20">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="会员好友查看转发内容(接收者)，赠送他什么？"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"/>
+                <LinearLayout
+                    android:id="@+id/ll_add_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_campaign_new_next"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_20"/>
+
+                    <Button
+                        android:id="@+id/btn_add_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:layout_marginLeft="@dimen/margin_40"
+                        android:layout_marginRight="@dimen/margin_40"
+                        android:background="@drawable/shape_btn_blue_corner"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:text="添加优惠券"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16"/>
+
+                </LinearLayout>
+
+                <!--优惠券-->
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom_coupon_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                        <com.zwx.scan.app.widget.carouselview.CustomCarouseView
+                            android:id="@+id/carsour_view_coupon_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_100"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            app:disableAutoPlayOnUserInteraction="true"
+                            app:fillColor="#FFFFFFFF"
+                            app:pageColor="#00000000"
+                            app:radius="6dp"
+                            app:strokeColor="#FF777777"
+                            app:strokeWidth="1dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/dots"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/carsour_view_coupon_list">
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <include layout="@layout/layout_campaign_coupon_edit"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.zwx.scan.app.widget.CustomScrollView>
+        <ImageButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="180dp"
+            android:background="@drawable/ic_new_coupon"
+            />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_pre"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/shape_btn_blue_stroke"
+                android:text="上一步"
+                android:textColor="@color/color_campaign_btn"
+                android:textSize="@dimen/font_size_16"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/shape_btn_blue_corner"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

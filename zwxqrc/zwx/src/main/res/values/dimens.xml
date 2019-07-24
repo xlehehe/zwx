@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--城市-->
+    <dimen name="cp_default_padding">16dp</dimen>
+
+    <dimen name="cp_index_bar_width">36dp</dimen>
+    <dimen name="cp_index_bar_text_size">13sp</dimen>
+
+    <dimen name="cp_cancel_text_size">15sp</dimen>
+    <dimen name="cp_search_text_size">15sp</dimen>
+
+    <dimen name="cp_empty_icon_width">56dp</dimen>
+    <dimen name="cp_empty_icon_height">56dp</dimen>
+    <dimen name="cp_empty_text_size">14sp</dimen>
+
+    <dimen name="cp_section_height">32dp</dimen>
+    <dimen name="cp_section_text_size">15sp</dimen>
+
+    <dimen name="cp_list_item_height">50dp</dimen>
+    <dimen name="cp_list_item_text_size">15sp</dimen>
+
+    <dimen name="cp_grid_item_space">16dp</dimen>
+    <dimen name="cp_grid_item_padding">10dp</dimen>
+
+    <dimen name="cp_overlay_width">100dp</dimen>
+    <dimen name="cp_overlay_height">100dp</dimen>
+    <dimen name="cp_overlay_text_size">28sp</dimen>
+
+
+    <dimen name="btn_height_45">35dp</dimen>
+    <dimen name="btn_width_60">60dp</dimen>
+    <dimen name="width_0">0dp</dimen>
+    <dimen name="width_0.5">0.5dp</dimen>
+    <dimen name="width_6">6dp</dimen>
+    <dimen name="width_10">10dp</dimen>
+    <dimen name="width_15">15dp</dimen>
+    <dimen name="width_20">20dp</dimen>
+    <dimen name="width_25">25dp</dimen>
+    <dimen name="width_30">30dp</dimen>
+    <dimen name="width_35">35dp</dimen>
+    <dimen name="width_40">40dp</dimen>
+
+    <dimen name="width_45">45dp</dimen>
+    <dimen name="width_50">50dp</dimen>
+
+    <dimen name="width_55">55dp</dimen>
+    <dimen name="width_60">60dp</dimen>
+    <dimen name="width_65">65dp</dimen>
+    <dimen name="width_80">80dp</dimen>
+    <dimen name="width_120">120dp</dimen>
+    <dimen name="width_108">108dp</dimen>
+    <dimen name="width_66">66dp</dimen>
+
+    <dimen name="heith_0">0dp</dimen>
+    <dimen name="height_20">20dp</dimen>
+    <dimen name="height_25">25dp</dimen>
+    <dimen name="height_30">30dp</dimen>
+    <dimen name="height_26">26dp</dimen>
+    <dimen name="height_35">35dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="height_42">42dp</dimen>
+    <dimen name="height_45">45dp</dimen>
+    <dimen name="height_50">50dp</dimen>
+    <dimen name="height_120">120dp</dimen>
+    <dimen name="height_60">60dp</dimen>
+    <dimen name="width_70">70dp</dimen>
+    <dimen name="height_70">70dp</dimen>
+    <dimen name="height_80">80dp</dimen>
+    <dimen name="height_48">48dp</dimen>
+    <dimen name="height_56">56dp</dimen>
+    <dimen name="height_96">96dp</dimen>
+    <dimen name="height_108">108dp</dimen>
+    <dimen name="height_296">296dp</dimen>
+    <dimen name="status_height_24">24dp</dimen>
+    <dimen name="app_bar_height_56">56dp</dimen>
+    <dimen name="tab_height_48">48dp</dimen>
+
+    <dimen name="avatar_height_64">64dp</dimen>
+    <dimen name="height_68">68dp</dimen>
+    <dimen name="width_68">68dp</dimen>
+
+
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_19">19dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+
+    <dimen name="margin_58">58dp</dimen>
+    <dimen name="margin_70">70dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_17">17dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_19">19dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_50">50dp</dimen>
+
+
+    <dimen name="font_size_8">8sp</dimen>
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_22">22sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+
+
+    <dimen name="font_size_34">34sp</dimen>
+    <dimen name="font_size_45">45sp</dimen>
+    <dimen name="font_size_56">56sp</dimen>
+
+
+
+    <dimen name="custom_section_height">36dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- ==================确认取消对话框================== -->
+    <!-- 对话框的圆角角度 -->
+    <dimen name="confirm_cancel_util_dialog_corners">8dp</dimen>
+    <!-- 对话框的整体外边距 -->
+    <dimen name="confirm_cancel_util_dialog_margin">40dp</dimen>
+    <!-- 对话框的标题内边距 -->
+    <dimen name="confirm_cancel_util_dialog_title_padding">10dp</dimen>
+    <!-- 对话框的标题大小 -->
+    <dimen name="confirm_cancel_util_dialog_title_text_size">16sp</dimen>
+    <!-- 中横线的外边距 -->
+    <dimen name="confirm_cancel_util_dialog_delever_margin">1dp</dimen>
+    <!-- 对话框的内容内边距 -->
+    <dimen name="confirm_cancel_util_dialog_message_padding">25dp</dimen>
+    <!-- 对话框的内容大小 -->
+    <dimen name="confirm_cancel_util_dialog_message_text_size">14sp</dimen>
+    <!-- 对话框的按钮大小 -->
+    <dimen name="confirm_cancel_util_dialog_btn_text_size">14sp</dimen>
+</resources>

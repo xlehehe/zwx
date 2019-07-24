@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="snow">#FFFAFA</color>
+
+
+    <color name="list_red">#FF566B</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#D0D0D0</color>
+    <color name="transparent">#00000000</color>
+    <!--<color name="color_gray_light">#cdcdcd</color>-->
+    <color name="color_gray">#999999</color>
+    <color name="color_gray_deep">#666666</color>
+    <color name="color_gray_dark">#333333</color>
+    <color name="color_gray_light">#999999</color>
+    <color name="color_section_bg">#EDEDED</color>
+    <color name="color_grid_item_bg">#f5f5f5</color>
+    <color name="line_color">#E2E8F0</color>
+    <color name="font_color_gray_light">#999999</color>
+    <color name="font_color_gray">#030303</color>
+    <color name="font_color_gray_deep">#0F1D37</color>
+    <color name="font_color_gray_dark">#333333</color>
+    <color name="shop_font_color_gray">#3C3C3C</color>
+    <color name="line_color_gray">#E5E5E5</color>
+
+    <color name="font_color_red">#F73C55</color>
+
+    <color name="font_color_blue">#0486FE</color>
+
+    <color name="bar_color">#4A90E2</color>
+
+    <color name="btn_color_blue">#4C94FC</color>
+
+    <color name="table_head_color">#F8F8F8</color>
+    <color name="btn_color_gray">#C1C1C3</color>
+    <!--弹框-->
+    <color name="ios_btntext_blue">#007aff</color>
+    <color name="text_title_11">#111111</color>
+    <color name="text_msg_33">#333333</color>
+    <color name="text_input_44">#444444</color>
+    <color name="search_color_search_gray">#404040</color>
+    <color name="btn_orange_dark">#FC8100</color>
+    <color name="text_item_33">#333333</color>
+    <color name="btn_alert">#222222</color>
+
+    <color name="scan_color">#0486FE</color>
+
+    <color name="color_xing">#E70000 </color>
+    <color name="line_dd">#dddddd</color>
+    <color name="dialogui_btn_normal">#ffffff</color>
+    <color name="dialogui_btn_pressed">#eeeeee</color>
+    <color name="datepick_surance_blue">#3598da</color>
+
+    <color name="color_dialog_title">#606266</color>
+
+    <color name="color_dialog_submit">#0486FE</color>
+
+    <color name="blue">#2A8EE3</color>
+    <color name="orange">#FFE8A140</color>
+    <color name="green">#83d383</color>
+    <!-- ************确认取消对话框************ -->
+    <!-- 对话框的边框颜色 -->
+    <color name="confirm_cancel_util_dialog_stroke_color">#7fbfbfbf</color>
+    <!-- 对话框的填充颜色 -->
+    <color name="confirm_cancel_util_dialog_solid_color">#ffffffff</color>
+    <!-- 对话框的标题颜色 -->
+    <color name="confirm_cancel_util_dialog_title_color">#4065EF</color>
+    <!-- 对话框的中横线颜色 -->
+    <color name="confirm_cancel_util_dialog_delever_h_color">#4065EF</color>
+    <!-- 对话框的内容颜色 -->
+    <color name="confirm_cancel_util_dialog_message_color">#6A6A6A</color>
+    <!-- 对话框的右侧按钮默认颜色 -->
+    <color name="confirm_cancel_util_dialog_btn_right_color">#4065EF</color>
+    <!-- 对话框的左侧按钮颜色 -->
+    <color name="confirm_cancel_util_dialog_btn_left_color">#ffffff</color>
+    <!-- 对话框的右侧按钮文字颜色 -->
+    <color name="confirm_cancel_util_dialog_btn_right_text_color">#ffffff</color>
+    <!-- 对话框的左侧按钮文字颜色 -->
+    <color name="confirm_cancel_util_dialog_btn_left_text_color">#000000</color>
+
+    <color name="color_campaign_btn">#3098F2</color>
+
+    <color name="campaign_new_font_gray">#C0C4CC</color>
+
+    <!--个人中心-->
+    <color name="msg_color">#FF3B30</color>
+
+    <color name="color_red">#FF566B</color>
+
+    <!--图片选择器-->
+    <color name="color_f6">#f6f6f6</color>
+
+    <color name="account_manage_gray_color">#303133</color>
+
+    <color name="account_manage_blue_color">#1989FA</color>
+
+    <color name="coupon_list_color">#606266</color>
+    <color name="coupon_new_color_flow_blue">#4c94fc</color>
+
+    <color name="contract_pay_list_color_blue">#F2F9FF</color>
+    <color name="contract_pay_list_color_gray">#F8F8F8</color>
+
+    <color name="color_blue_gray">#E2E8F0</color>
+    <color name="divide_gray_color">#f7f7f7</color>
+
+    <color name="s_ll_color">#FEFCEC</color>
+    <color name="s_text_color">#F76A24</color>
+
+    <color name="member_card_style_color_black">#000000</color>
+    <color name="member_card_style_color_white">#FFFFFF</color>
+    <color name="member_card_style_color_red">#FF2727</color>
+    <color name="member_card_style_color_orange">#F86000</color>
+    <color name="member_card_style_color_yellow">#FFD534</color>
+    <color name="member_card_style_color_blue">#0486FE</color>
+    <color name="member_card_style_color_green">#51D7B9</color>
+    <color name="member_card_style_color_purple">#9E4DEE</color>
+
+    <color name="font_color_green">#53A651</color>
+</resources>

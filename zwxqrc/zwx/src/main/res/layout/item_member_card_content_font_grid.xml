@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="56dp"
+            android:layout_height="@dimen/font_size_34"
+            android:src="@drawable/ic_member_card_style_color_black"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:id="@+id/ll_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top|right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/scb"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center|right"
+                android:background="@drawable/ic_blue_selected"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--<ImageView
+        android:id="@+id/iv_font_color"
+        android:layout_width="56dp"
+        android:layout_height="34dp"
+        android:background="@drawable/shape_list_round_corner"
+        android:layout_centerInParent="true">
+
+
+    </ImageView>
+    <LinearLayout
+        android:id="@+id/ll_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top|right"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/iv_font_color">
+
+        <ImageView
+            android:id="@+id/scb"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/ic_blue_selected"
+            android:layout_marginLeft="6dp"/>
+
+    </LinearLayout>-->
+
+
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.personal.PersonalAccountManageActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <include layout="@layout/layout_line_horizontal"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:text="@string/my_jichuxinxi"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_dark"
+                android:paddingLeft="@dimen/padding_20"
+                android:gravity="center|left"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <!--<RelativeLayout
+                    android:id="@+id/rl_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20">
+                    <TextView
+                        android:id="@+id/tv_touxiang_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_touxiang"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+                                    <TextView
+                                        android:id="@+id/tv_sex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:hint="请选择性别"
+                                        android:textSize="@dimen/font_size_14"
+                                        android:textColor="@color/color_gray_deep"
+                                        android:drawablePadding="@dimen/padding_10"
+                                        android:drawableRight="@drawable/ic_next"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:paddingRight="@dimen/margin_10"/>
+
+                    <com.zwx.library.circleimageview.CircleImageView
+                        android:id="@+id/circle_view"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ic_logo_default"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>-->
+                <include layout="@layout/layout_line_horizontal"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20">
+                    <TextView
+                        android:id="@+id/tv_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_name"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+                    <!-- <TextView
+                         android:id="@+id/tv_name"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="王大锤"
+                         android:hint=""
+                         android:textSize="@dimen/font_size_14"
+                         android:textColor="@color/color_gray_deep"
+                         android:drawablePadding="@dimen/padding_10"
+                         android:drawableRight="@drawable/ic_next"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerInParent="true"
+                         android:gravity="center"/>-->
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_35"
+                        android:background="@color/white"
+                        android:hint="@string/input_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="王大锤"
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="@dimen/font_size_14"
+                        android:gravity="center|right"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="@dimen/padding_5"
+                        android:drawableRight="@drawable/ic_next"/>
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_account"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15954103102"
+                        android:hint=""
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"/>
+
+
+                </RelativeLayout>
+                <include layout="@layout/layout_line_horizontal"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_psd"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+                    <TextView
+                        android:id="@+id/tv_psd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:hint="请设置密码"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/color_gray_deep"
+                        android:drawablePadding="@dimen/padding_5"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:text="@string/my_role"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_dark"
+                android:paddingLeft="@dimen/padding_20"
+                android:gravity="center|left"/>
+            <com.zwx.scan.app.widget.MyListView
+                android:id="@+id/list_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                ></com.zwx.scan.app.widget.MyListView>
+            <!--<RelativeLayout
+                android:id="@+id/rl_role"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="角色1"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店长"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"/>
+
+
+            </RelativeLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40"
+                android:text="@string/my_suoshudianpu"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_dark"
+                android:paddingLeft="@dimen/padding_20"
+                android:gravity="center|left"/>
+
+            <com.zwx.scan.app.widget.MyListView
+                android:id="@+id/list_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                ></com.zwx.scan.app.widget.MyListView>
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/account_manage_label"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

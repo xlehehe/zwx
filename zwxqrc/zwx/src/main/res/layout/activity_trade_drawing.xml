@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_common_title" />
+    <include layout="@layout/layout_line_horizontal"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_trade_drawing_bg"
+                android:scaleType="fitXY"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:textColor="@color/white"
+                    android:text="可提现金额"
+                    android:gravity="center|left"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginRight="@dimen/height_30"
+                    android:gravity="center|left">
+
+                    <TextView
+                        android:id="@+id/tv_drawal_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="0"
+                        android:textSize="36dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:textColor="@color/white"
+                        android:text="元"
+                        android:textSize="18dp"
+                        android:gravity="center|left"
+                        />
+
+                </LinearLayout>
+            <!--    <EditText
+                    android:id="@+id/edt_amt"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="left|center"
+                    android:imeOptions="actionNext"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/shape_trade_drawing_edit_amt_line"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="36sp"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_10"
+                    />-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@drawable/shape_trade_drawing_edit_amt_line"
+
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:layout_gravity="center"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_trade_drawing_shadow"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20">
+                    <TextView
+                        android:id="@+id/tv_product_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="待结算金额"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_marginLeft="@dimen/margin_20"/>
+
+                    <TextView
+                        android:id="@+id/tv_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/tv_product_name_label"
+
+                        android:paddingLeft="@dimen/padding_10"
+                        android:text="0元"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_14" />
+
+
+
+                    <ImageView
+                        android:id="@+id/iv_detailed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trade_drawing_select_detailed"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/margin_20"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_20">
+            <Button
+                android:id="@+id/btn_drawing"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/height_42"
+                android:background="@drawable/shape_btn_blue_corner"
+                android:text="立即提现"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_drawing_record"
+                android:layout_width="@dimen/margin_200"
+                android:layout_height="@dimen/height_42"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/shape_btn_blue_stroke"
+                android:text="提现记录"
+                android:textColor="@color/color_campaign_btn"
+                android:textSize="@dimen/font_size_16"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

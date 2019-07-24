@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.countanalysis.member.MemberAnalysisActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/ic_line_horizontal"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/layout_common_select_more"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                android:background="@color/white">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_label_left"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:text="当前店铺汇总统计"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_16"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:typeface="serif"
+                        android:textStyle="bold"/>
+
+                    <com.zwx.scan.app.widget.SegmentControl
+                        android:id="@+id/segment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_35"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.64"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:scv_BackgroundSelectedColor="@color/font_color_blue"
+                        app:scv_FrameColor="@color/font_color_blue"
+                        app:scv_FrameCornerRadius="6dp"
+                        app:scv_FrameWidth="1dp"
+                        app:scv_Gradient="true"
+                        app:scv_SegmentPaddingVertical="5dp"
+                        app:scv_TextArray="@array/app_array"
+                        app:scv_TextNormalColor="@color/color_gray_deep"
+                        />
+                    <include layout="@layout/layout_chart"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_staff_paimin_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="本月店铺员工完成拉新任务排名"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:typeface="serif"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center">
+
+
+
+                    <Button
+                        android:id="@+id/btn_effect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="拉新参与数"
+                        android:textSize="@dimen/font_size_12"
+                        android:textColor="@color/white"
+                        android:background="@drawable/ic_btn_blue_selected"/>
+
+                    <Button
+                        android:id="@+id/btn_uneffect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="拉新成功数"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@drawable/ic_btn_gray_unselect"
+                        android:layout_marginLeft="@dimen/margin_20"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:background="@drawable/shape_text_normal"
+                        />
+
+                    <include layout="@layout/layout_analysis_no_data_tip"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

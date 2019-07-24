@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".feature.financialaffairs.CollectionMoneyIntoAccountListActivity">
+
+    <include layout="@layout/layout_common_title" />
+
+    <include layout="@layout/layout_line_horizontal" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_int_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_expected_into_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_expected_into_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="—"
+                            android:textColor="@color/font_color_blue"
+                            android:textSize="@dimen/font_size_20"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="元"
+                            android:textColor="@color/font_color_blue"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="预计明天到账金额"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_color_gray" />
+                <LinearLayout
+                    android:id="@+id/ll_no_into_amt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_no_into_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="—"
+                            android:textColor="@color/font_color_blue"
+                            android:textSize="@dimen/font_size_20"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="元"
+                            android:textColor="@color/font_color_blue"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="未到账金额"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.zwx.library.tablayout.CommonTabLayout
+                xmlns:tl="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/common"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                tl:tl_textsize="@dimen/font_size_16"
+                tl:tl_indicator_color="@color/font_color_blue"
+                tl:tl_textSelectColor="@color/font_color_blue"
+                tl:tl_textUnselectColor="@color/color_gray_deep"
+                tl:tl_indicator_margin_left="@dimen/margin_30"
+                tl:tl_indicator_margin_right="@dimen/margin_30"/>
+
+            <com.zwx.scan.app.widget.NoScrollViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+</LinearLayout>

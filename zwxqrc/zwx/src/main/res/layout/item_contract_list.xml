@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_store_manager_mobile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/margin_20"
+    android:paddingRight="@dimen/margin_20"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <LinearLayout
+        android:id="@+id/ll_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_contract_no_label"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center|left"
+                android:text="合同编号："
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_contract_no"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:text="2019.01.03-2020.01.03"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"
+                android:layout_toRightOf="@id/tv_contract_no_label"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center|left"
+                android:text="@string/youxiaoshijian"
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:text="2019.01.03-2020.01.03"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"
+                android:layout_toRightOf="@id/tv_label"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_zhiying"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

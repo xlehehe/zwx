@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_10"
+
+        android:layout_marginBottom="@dimen/height_20"
+        android:layout_alignParentTop="true">
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="240dp"
+            android:layout_height="430dp"
+            android:layout_toLeftOf="@id/ll_right"
+            android:layout_marginTop="@dimen/height_60"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_lhpt_preview_wechat"/>
+            <LinearLayout
+                android:id="@+id/ll_sylunbo"
+                android:layout_width="221dp"
+                android:layout_height="371dp"
+                android:background="@drawable/ic_pt_sylb_bg"
+                android:orientation="vertical"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="13dp">
+
+                <ImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/ic_lh_pt_sylunbo_banner"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="70dp"/>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/ll_sylb"
+                android:layout_width="221dp"
+                android:layout_height="370dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="13dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/ic_lh_sylbiao_bg">
+
+                <LinearLayout
+                    android:id="@+id/ll_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="276dp"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5">
+
+                        <ImageView
+                            android:id="@+id/iv_lhpt_sylb_campaign"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_logo_default"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@+id/iv_lhpt_sylb_campaign"
+                            android:layout_marginLeft="@dimen/margin_2">
+                            <TextView
+                                android:id="@+id/tv_campaign_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="四季明湖双而是"
+                                android:textSize="8sp"
+                                android:textColor="@color/black"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_20">
+
+                                <TextView
+                                    android:id="@+id/tv_time_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="活动时间："
+                                    android:textSize="8sp"
+                                    android:textColor="@color/color_gray_deep"/>
+
+                                <TextView
+                                    android:id="@+id/tv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2018-12-3~2018-12-31"
+                                    android:textSize="8sp"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:layout_marginLeft="2dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:src="@drawable/ic_arrow_right"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/margin_10"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_yxzy"
+                android:layout_width="240dp"
+                android:layout_height="430dp"
+               >
+                <FrameLayout
+                    android:layout_width="240dp"
+                    android:layout_height="430dp"
+                    android:layout_gravity="center">
+
+
+                    <FrameLayout
+
+                        android:layout_width="240dp"
+                        android:layout_height="430dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="210dp"
+                            android:layout_height="400dp"
+                            android:background="@color/white"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            />
+                        <ImageView
+                            android:id="@+id/iv_lh_pt_yxzy"
+                            android:layout_width="220dp"
+                            android:layout_height="400dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_gravity="center"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="240dp"
+                        android:layout_height="430dp"
+                        android:background="@drawable/ic_lh_yxzy_preview_bg"
+                        >
+
+                    </FrameLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+<!--
+            <LinearLayout
+                android:id="@+id/ll_yxzy2"
+                android:layout_width="221dp"
+                android:layout_height="370dp"
+                android:background="@drawable/ic_preview_white_bg"
+                android:orientation="vertical"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="13dp"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/iv_lh_pt_yxzy2"
+                    android:layout_width="221dp"
+                    android:layout_height="370dp"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="fitXY"/>
+
+            </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/ll_yxzy2"
+            android:layout_width="240dp"
+            android:layout_height="430dp"
+            >
+            <FrameLayout
+                android:layout_width="240dp"
+                android:layout_height="430dp"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="221dp"
+                    android:layout_height="370dp"
+                    android:background="@drawable/ic_preview_white_bg"
+                    android:orientation="vertical"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_lh_pt_yxzy2"
+                        android:layout_width="219dp"
+                        android:layout_height="368dp"
+                        android:layout_marginBottom="40dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_lh_yxzy"
+                    android:layout_width="240dp"
+                    android:layout_height="430dp"
+                    android:background="@drawable/ic_ge_three_bg"
+                    >
+
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/height_40">
+            <LinearLayout
+                android:id="@+id/ll_dis_top"
+                android:layout_width="@dimen/height_40"
+                android:layout_height="@dimen/height_40"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_20">
+
+                <ImageView
+
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"
+                    android:background="@drawable/ic_clear"
+                    android:layout_gravity="top"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/lh_pt_fxxg"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/btn_color_blue"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/ic_lh_pt_fxxg_selected"/>
+
+                <Button
+                    android:id="@+id/lh_pt_sylunbo"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/ic_lh_pt_sylunbo_unselect"
+                    android:layout_marginTop="58dp"/>
+                <Button
+                    android:id="@+id/lh_pt_sylb"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/ic_lh_pt_sylb_unselect"
+                    android:layout_marginTop="118dp"/>
+                <Button
+                    android:id="@+id/lh_pt_yxzy"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/ic_lh_pt_yxzy_unselect"
+                    android:layout_marginTop="173dp"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_below="@id/rl_top"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn_use"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/height_35"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:text="关闭预览"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

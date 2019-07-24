@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color_gray"/>
+            <TextView
+                android:id="@+id/tv_coupon_name"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/coupon_value"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color_gray"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_send1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="优惠券发放数量"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_foward1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="优惠券领取数量"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_receive1"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="回收数量"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_shouyi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="带来收益(元)"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color_gray"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="9999"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/btn_color_blue"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_foward"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/btn_color_blue"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_receive"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="129"
+
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/btn_color_blue"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color_gray"/>
+                <TextView
+                    android:id="@+id/tv_shouyi"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="129"
+
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/btn_color_blue"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color_gray"/>
+
+        </LinearLayout>
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color_gray"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color_gray"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.countanalysis.campaign.CampaignAnalysisActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/btn_effect"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="正在生效"
+                android:textSize="@dimen/font_size_12"
+                android:textColor="@color/white"
+                android:background="@drawable/ic_btn_blue_selected"/>
+
+            <Button
+                android:id="@+id/btn_uneffect"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="已失效"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_12"
+                android:background="@drawable/ic_btn_gray_unselect"
+                android:layout_marginLeft="@dimen/margin_20"/>
+        </LinearLayout>
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both"
+            android:scrollbars="none"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.zwx.scan.app.widget.MyListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:divider="@color/divide_gray_color"
+                    android:dividerHeight="@dimen/margin_10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <include layout="@layout/layout_analysis_no_data_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_200"/>
+            </LinearLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+       <!-- <com.chanven.lib.cptr.PtrClassicFrameLayout
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close="200"
+            cube_ptr:ptr_duration_to_close_header="700"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.8"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+
+        </com.chanven.lib.cptr.PtrClassicFrameLayout>-->
+
+
+    </LinearLayout>
+</LinearLayout>

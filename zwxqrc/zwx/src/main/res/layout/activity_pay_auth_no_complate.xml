@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".feature.personal.PayAuthNoComplateActivity">
+
+    <include layout="@layout/layout_common_title"/>
+    <include layout="@layout/layout_line_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_id_card_auth_bg"
+            android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_marginTop="210dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_personal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:background="@drawable/ic_no_auth_white_bg"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/margin_10">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_personal_auth_img"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:id="@+id/tv_personal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:hint=""
+                        android:text="个人认证"
+                        android:textColor="@color/search_color_search_gray"
+                        android:textSize="@dimen/font_size_16"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                    <TextView
+                        android:id="@+id/tv_personal_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:drawableRight="@drawable/ic_arrow_right"
+                        android:text="去认证个人信息"
+                        android:textColor="@color/font_color_blue"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_enterprise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:background="@drawable/ic_no_auth_white_bg"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_enterprise_auth_img"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_enterprise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:hint=""
+                        android:text="企业认证"
+                        android:textColor="@color/search_color_search_gray"
+                        android:textSize="@dimen/font_size_16"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tv_enterprise_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:drawableRight="@drawable/ic_arrow_right"
+                        android:text="去认证企业信息"
+                        android:textColor="@color/font_color_blue"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_marginTop="@dimen/margin_10"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint=""
+            android:text="企业认证"
+            android:textColor="@color/search_color_search_gray"
+            android:textSize="@dimen/font_size_14"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginRight="@dimen/height_40"
+            android:layout_marginLeft="@dimen/height_40"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

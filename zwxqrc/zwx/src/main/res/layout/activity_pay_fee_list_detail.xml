@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.zwx.scan.app.feature.financemanage.PayFeeListDetailActivity">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <include layout="@layout/layout_line_horizontal"
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="付款金额"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="¥366.00"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="付款单号"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_pay_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="FKD20183293724"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_horizontal" />
+        <RelativeLayout
+            android:id="@+id/rl_contract"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="合同编号"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_contract_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="HT98323749Y23"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_horizontal" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+                android:id="@+id/tv_pay_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="最后交款时间"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="2018.10.30"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_horizontal" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="缴费状态"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="未付款"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line_horizontal" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_60"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+
+    </LinearLayout>
+
+</LinearLayout>

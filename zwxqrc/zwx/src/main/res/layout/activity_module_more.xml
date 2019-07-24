@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".feature.modulemore.ModuleMoreActivity">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/ic_line_horizontal"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="常用功能"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- android:background="@drawable/bk_footer" -->
+
+                        <RadioButton
+                            android:id="@+id/rb_verification"
+                            style="@style/main_tab_bottom"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_home_scancode"
+                            android:text="核销" />
+
+                        <RadioButton
+                            android:id="@+id/rb_verification_record"
+                            style="@style/main_tab_bottom"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_home_recording"
+                            android:text="核销记录" />
+
+                        <RadioButton
+                            android:id="@+id/rb_count_analysis"
+                            style="@style/main_tab_bottom"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_home_statistics"
+                            android:text="统计分析" />
+                        <RadioButton
+                            android:id="@+id/rb_count_analysis2"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_member_consume"
+                            android:text="会员消费记录"
+                            android:visibility="invisible"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员管理"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+                    <RadioGroup
+                        android:id="@+id/rg_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+
+                        <!-- android:background="@drawable/bk_footer" -->
+
+                        <!--<RadioButton
+                            android:id="@+id/rb_member_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_staff_manage"
+                            android:text="会员信息查询"
+                            android:button="@null"
+                            android:drawablePadding="5dp"
+                            android:gravity="left"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_member_consume_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/ic_staff_manage"
+                            android:text="会员消费记录"
+                            android:button="@null"
+                            android:drawablePadding="5dp"
+                            android:gravity="left"/>-->
+                        <RadioButton
+                            android:id="@+id/rb_member_info"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_member_info"
+                            android:text="会员卡信息管理" />
+
+                        <RadioButton
+                            android:id="@+id/rb_member_consume_record"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_consume_record"
+                            android:text="会员消费记录" />
+
+                        <RadioButton
+                            android:id="@+id/rb_member_red_envelopo"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_more_red_envelope"
+                            android:text="会员红包查询"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_member_sign"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_member_info"
+                            android:text="会员签到"
+                            android:visibility="invisible"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员卡管理"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+                    <RadioGroup
+                        android:id="@+id/rg_member_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_member_card_manage"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_member_card_manage"
+                            android:text="会员卡管理"
+                            android:visibility="visible"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_member_card_manage2"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_member_card_liushui"
+                            android:text="会员卡收款流水"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_member_card_manage3"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_member_consume"
+                            android:text="会员消费记录"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_member_card_manage4"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_member_consume"
+                            android:text="会员消费记录"
+                            android:visibility="invisible"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券和活动"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_coupon_campaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_coupon_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_coupon_manage"
+                            android:text="优惠券管理"
+                            android:visibility="visible"/>
+
+
+                        <RadioButton
+                            android:id="@+id/rb_campaign"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_campaign_manage"
+                            android:text="活动管理"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_changguifafang_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_changguifafang_manage"
+                            android:text="@string/changguifaquan_manage"/>
+                        <RadioButton
+                            android:id="@+id/rb_poster_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_poster_manage"
+                            android:text="海报管理"
+                            android:visibility="invisible"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_coupon_campaign2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_new_poster_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_new_poster_manage"
+                            android:text="新建海报"
+                            android:visibility="visible"
+                            />
+                        <RadioButton
+                            android:id="@+id/rb_new_poster_manage2"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_coupon_manage"
+                            android:text="优惠券管理"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_new_poster_manage3"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_campaign_manage"
+                            android:text="活动管理"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_new_poster_manage4"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_changguifafang_manage"
+                            android:text="@string/changguifaquan_manage"
+                            android:visibility="invisible"/>
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拼团"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_pt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_pt_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pt_order"
+                            android:text="拼团管理"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_pt_order"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pt_manage"
+                            android:text="拼团订单"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_pt_order3"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pt_order"
+                            android:text="拼团订单"
+                            android:visibility="invisible"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_pt_order4"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pt_order"
+                            android:text="拼团订单"
+                            android:visibility="invisible"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商城"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+
+
+
+                            <RadioButton
+                                android:id="@+id/rb_product_verification"
+                                style="@style/main_tab_bottom"
+                                android:button="@null"
+                                android:drawableTop="@drawable/ic_product_verification"
+                                android:text="商品核销"
+                                android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_product_verification_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_product_verification_manage"
+                            android:text="商品核销记录"
+                            android:visibility="visible"/>
+                            <RadioButton
+                                android:id="@+id/rb_shop_setting"
+                                style="@style/main_tab_bottom"
+                                android:button="@null"
+                                android:drawableTop="@drawable/ic_shop_setting"
+                                android:text="商城基本设置"
+                                android:visibility="visible"/>
+                            <RadioButton
+                                android:id="@+id/rb_shop_manage"
+                                style="@style/main_tab_bottom"
+                                android:button="@null"
+                                android:drawableTop="@drawable/ic_shop_good_manage"
+                                android:text="商品管理"/>
+
+                  <!--      <RadioButton
+                            android:id="@+id/rb_shop_order"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_shop_order_manage"
+                            android:text="订单管理"
+                            android:visibility="visible"/>-->
+
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/rg_shop2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/margin_10"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/rb_shop_order"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_shop_order_manage"
+                            android:text="订单管理"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_shop_order2"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_product_verification"
+                            android:text="商品核销"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_shop_order3"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_product_verification_manage"
+                            android:text="商品核销记录"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_shop_order4"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_shop_setting"
+                            android:text="商城基本设置"
+                            android:visibility="invisible"/>
+
+
+
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="财务中心"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_financial_affairs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rb_collection_kuan_setting"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_collection_account_setting"
+                            android:text="收款帐号设置"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_collection_kuan_to_account"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_collection_money_to_account"
+                            android:text="收款到账"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_collection_flow"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_collect_consume_manage"
+                            android:text="收款流水"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_card_emploee_report"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_memcard_sale_report_manage"
+                            android:text="会员卡员工销售报表"
+                            android:visibility="visible"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:gravity="center|bottom"
+                            android:layout_marginTop="@dimen/sp_14"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:paddingTop="0dp"/>
+
+
+                        <!--  <RadioButton
+                              android:id="@+id/rb_shop_order"
+                              style="@style/main_tab_bottom"
+                              android:button="@null"
+                              android:drawableTop="@drawable/ic_shop_order_manage"
+                              android:text="订单管理"
+                              android:visibility="visible"/>-->
+
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/rg_financial_affairs2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/margin_10">
+                        <RadioButton
+                            android:id="@+id/rb_pt_emploee_report"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_ptempl_sale_report_manage"
+                            android:text="拼团员工销售报表"
+                            android:visibility="visible"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:gravity="center|bottom"
+                            android:layout_marginTop="@dimen/sp_14"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:paddingTop="0dp"/>
+                        <RadioButton
+                            android:id="@+id/rb_goods_emploee_report"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_goodsemp_sale_report_manage"
+                            android:text="商品员工销售报表"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:gravity="center|bottom"
+                            android:layout_marginTop="@dimen/sp_14"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:paddingTop="0dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_no_emploee_report"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_noemp_sale_report_manage"
+                            android:text="非员工销售报表"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_trade_drawing"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_trade_drawing_manage"
+                            android:text="交易提款"
+                            android:visibility="visible"/>
+
+
+              <!--          <RadioButton
+                            android:id="@+id/rb_no_emploee_report3"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_product_verification_manage"
+                            android:text="商品核销记录"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_no_emploee_report4"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_shop_setting"
+                            android:text="商城基本设置"
+                            android:visibility="invisible"/>-->
+
+
+
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="餐企管理"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_staff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+                        <!-- android:background="@drawable/bk_footer" -->
+
+
+
+                        <RadioButton
+                            android:id="@+id/rb_staff_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_member_manage"
+                            android:text="员工管理"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_cateringinfo_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_catering_manage"
+                            android:text="餐企信息管理"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_account_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_home_account"
+                            android:text="账号管理"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_qrc_manage"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_cate_qrc_manage"
+                            android:text="拉新二维码推送消息"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:maxLines="2"
+                            android:singleLine="false"
+                            android:gravity="center|bottom"
+                            android:layout_marginTop="@dimen/sp_14"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:paddingTop="0dp"
+                            android:visibility="visible"/>
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/ic_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合同与缴费管理"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white">
+
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_contract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal">
+                        <!-- android:background="@drawable/bk_footer" -->
+
+
+
+                        <RadioButton
+                            android:id="@+id/rb_contract_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_more_contract"
+                            android:text="合同查询"
+                            android:visibility="visible"/>
+                        <RadioButton
+                            android:id="@+id/rb_pay_fee_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pay_fee_manage"
+                            android:text="缴费管理"
+                            android:visibility="invisible"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_invoice_mamange"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pay_fapiao"
+                            android:text="发票管理"
+                            android:visibility="invisible"/>
+                        <RadioButton
+                            android:id="@+id/rb_invoice_mamange2"
+                            style="@style/main_tab_bottom"
+                            android:button="@null"
+                            android:drawableTop="@drawable/ic_pt_order"
+                            android:text="拼团订单"
+                            android:visibility="invisible"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

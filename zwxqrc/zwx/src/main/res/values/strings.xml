@@ -1,0 +1,342 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">有食间</string>
+
+
+    <string name="hint_input_account">请输入登录账号</string>
+
+    <string name="hint_input_psd">请输入登录密码</string>
+
+
+    <string name="save_account">记住账号</string>
+    <string name="hint_account_error">账号错误</string>
+
+    <string name="hint_psd_error">密码错误</string>
+
+    <string name="hint_account_empty">账号不能为空</string>
+
+    <string name="hint_psd_empty">密码不能为空</string>
+
+    <string name="hint_psd_lenth">密码长度为6~20</string>
+    <!--异常-->
+    <string name="network_error">网络连接异常，请重试!</string>
+    <string name="coupon_value">四季明湖双十二活\n
+动全聚德烤鸭券</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="quit">再按一次退出</string>
+    <string name="veri_record">核销记录</string>
+    <string name="veri_record_sum">当前店铺核销记录概述</string>
+    <string name="veri_record_situation">当前店铺优惠券核销情况</string>
+    <string name="record_detail_coupon_name">明湖小楼双12活动50元代金券 5元代金券</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search">请输入搜索的内容</string>
+    <string name="member_card_info_search">请输入手机号进行搜索</string>
+    <string-array name="app_array">
+        <item>今日</item>
+        <item>本周</item>
+        <item>本月</item>
+    </string-array>
+
+    <string name="huanhang">\n</string>
+
+    <!-- ************确认取消对话框************ -->
+    <string name="confirm_cancel_title">提示</string>
+    <string name="confirm_cancel_right_btn">确定</string>
+    <string name="confirm_cancel_left_btn">取消</string>
+
+
+    <string name="phone">手机</string>
+    <string name="input_phone">请输入手机号</string>
+    <string name="input_telphone">请输入联系方式</string>
+    <string name="name">姓名</string>
+    <string name="input_name">请输入姓名</string>
+    <string name="sex">性别</string>
+    <string name="input_sex">请选择性别</string>
+    <string name="birthday">出生日期</string>
+
+    <string name="entry_time">入职时时间</string>
+    <string name="select_entry_time">请选择日期</string>
+    <string name="position">职位</string>
+    <string name="select_position">请选择职位</string>
+    <string name="qrc">绑定拉新二维码</string>
+    <string name="select_qrc">请选择二维码</string>
+
+    <string name="is_quit">是否离职</string>
+
+
+    <string name="next">下一步</string>
+    <string name="previous">上一步</string>
+    <string name="add_coupon">添加优惠券</string>
+    <string name="campaign_coupon_forward_tip">会员好友查看转发内容(接收者)，赠送他什么？</string>
+    <string name="coupon_name">优惠券名称</string>
+    <string name="coupon_valid_time">优惠券的有效时间</string>
+    <string name="coupon_effective_time_one">生效时间：</string>
+    <string name="coupon_effective_time_two">有效时间：</string>
+    <string name="coupon_day_time">获取后几天生效</string>
+    <string name="coupon_effective_end">优惠券有效期限</string>
+    <string name="coupon_day">天</string>
+    <string name="campaign_coupon_set">活动优惠券设置</string>
+
+
+    <string name="haibao">海\n报</string>
+
+    <string name="hengfu">横\n幅</string>
+
+    <string name="fengxiang">分\n享\n效\n果</string>
+
+    <string name="text_select_all_coupon">全部优惠卷</string>
+    <string name="text_select_all">查看全部</string>
+
+    <string name="text_member">会员卡</string>
+
+    <string name="text_campaign_rule_desc">1.转发朋友圈或者微信好友，您将获得优惠券。\n
+            2.好友点击可领取优惠券\n
+            3.好友使用优惠券，您将额外获得优惠券。\n
+            4.如有其他疑问，请咨询商家。</string>
+
+    <string name="text_campaign">活动</string>
+
+    <string name="text_zhekoujuan">折扣卷</string>
+    <string name="text_daijinjuan">代金卷</string>
+    <string name="text_shop">关注店铺</string>
+    <string name="copy_create">复制并创建</string>
+    <color name="red_dark">#F73C55</color>
+
+    <string name="select_time">请选择时间 </string>
+    <string name="select_join_store_name">选择参与店铺 </string>
+    <string name="select_brand_store_name">品牌店铺名称 </string>
+    <string name="select_participating_store">选择适用店铺</string>
+    <string name="forward_title">请输入转发标题</string>
+    <string name="forward_content">请输入转发内容</string>
+    <!--个人中心-->
+    <string name="my_jichuxinxi">基础信息</string>
+    <string name="my_role">账号角色</string>
+    <string name="my_touxiang">用户头像</string>
+
+    <string name="my_name">用户姓名</string>
+
+    <string name="my_account">账号</string>
+    <string name="my_psd">密码</string>
+
+    <string name="my_suoshudianpu">所属店铺</string>
+    <string name="account_sett">账号设置</string>
+    <string name="save">保存</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="exit_account">退出账号</string>
+    <string name="title_system_manage">系统管理</string>
+    <string name="title_message">消息</string>
+    <string name="title_message_manage">消息中心</string>
+    <string name="title_account_manage">账号管理</string>
+    <string name="you_clear_cache">您确定要清除缓存吗？</string>
+
+    <string name="title_psd_manage">密码管理</string>
+    <string name="old_psd">旧密码</string>
+
+    <string name="new_psd">新密码</string>
+    <string name="tip_input_old_psd">请输入旧的密码</string>
+    <string name="tip_input_new_psd">请输入新的密码</string>
+    <string name="show_psd">显示密码</string>
+    <string name="error_old_psd">旧密码输入错误，请重新输入</string>
+
+    <string name="software_version">软件版本</string>
+    <string name="qrc_download">扫码下载App</string>
+
+
+    <string name="msg_readed">一键已读</string>
+    <string name="msg_clear">一键清空</string>
+
+    <string name="store_manage">店长：</string>
+    <string name="account_manage_label">注：若账号角色和店铺修改，请联系品牌管理员。</string>
+    <string name="more_500">"最多输入500个字"</string>
+
+
+    <!--餐企信息管理-->
+    <string name="jichushezhi">基础设置</string>
+    <string name="store_name">店铺名称</string>
+
+    <string name="store_manager_name">店长姓名</string>
+    <string name="store_manager_mobile">店长联系方式</string>
+    <string name="store_mobile">店铺联系方式</string>
+    <string name="jingying_mode">经营模式</string>
+    <string name="address_set">地址信息设置</string>
+    <string name="suozaidiqu">所在地区</string>
+    <string name="yingyexinxi">店铺营业信息</string>
+    <string name="yingyeshijian">营业时间</string>
+    <string name="zhuyingleibie">主营类别</string>
+    <string name="tigongfuwu">提供服务</string>
+    <string name="tigongyanxi">提供宴席</string>
+
+
+    <string name="dianpuhuanjing">店铺环境</string>
+    <string name="dianpuerweima">店铺二维码</string>
+    <string name="download_qrc">下载二维码</string>
+    <string name="store_info_manage">店铺信息管理</string>
+
+
+    <string name="new_account">新建账号</string>
+    <string name="edit_account">编辑账号</string>
+    <string name="select_role">选择绑定角色</string>
+
+    <string name="select_store">选择店铺</string>
+    <string name="select_auth">查看权限</string>
+    <string name="auth_name">权限名称</string>
+    <string name="auth_type">权限类型</string>
+    <string name="pt_manage">拼团管理</string>
+    <string name="changguifaquan_manage">常规发券管理</string>
+    <string name="coupon_manage">优惠券管理</string>
+    <string name="card_manage">会员卡管理</string>
+    <string name="poster_manage">海报管理</string>
+    <string name="new_label">新建</string>
+
+    <string name="camapign_coupon_new_next_add">请问你想赠送给会员什么优惠券呢</string>
+
+    <string name="set_label">设置</string>
+    <string name="camapign_coupon_new_kaikali">请问你想对哪个会员卡设置开卡礼</string>
+
+    <string name="camapign_coupon_new_kaikali_time">请问你想让这个开卡礼持续多长时间</string>
+
+
+    <string name="camapign_coupon_new_shengrili">请问你想对哪个会员卡设置生日礼</string>
+    <string name="camapign_coupon_new_shengrili_shenme">你想什么时间给会员生日礼</string>
+    <string name="camapign_coupon_new_shengrili_qianjitian">生日前几天发送</string>
+    <string name="camapign_coupon_new_shengrili_setting_time">请问你想让这个会员生日礼设置持续多长时间</string>
+    <string name="camapign_coupon_new_huiyuanri_label">请问你想将该会员卡的会员日设置到哪一天</string>
+    <string name="camapign_coupon_new_huiyuanri">请问你想对哪一个会员卡，设置会员日</string>
+
+    <string name="camapign_coupon_new_next_huiyuanri">会员日可获得什么优惠券</string>
+    <string name="start_time">开始时间</string>
+
+    <string name="end_time">结束时间</string>
+
+    <string name="changguifaquan_manage_count">常规发券管理统计</string>
+    <string name="pin_tuan_manage_count">拼团统计分析</string>
+    <string name="queren">确认</string>
+
+    <string name="brand_name">品牌名称 </string>
+
+
+    <!--合同管理-->
+
+    <string name="jichuqianyuexinxi">基础签约信息</string>
+
+    <string name="service_money">月服务费</string>
+
+    <string name="pay_way">缴费方式</string>
+
+    <string name="pay_record">缴费记录</string>
+
+
+    <string name="pay_day">收费日期</string>
+
+    <string name="pay_money">收费金额</string>
+
+    <string name="is_pay">是否缴费</string>
+    <string name="qianyue_hetong">签约合同</string>
+    <string name="qianyue_xinxi">签约信息</string>
+
+    <string name="youxiaoshijian">有效时间：</string>
+
+    <string name="tip_input_forward_title">请输入转发标题</string>
+    <string name="tip_input_forward_content">请输入转发内容</string>
+    <string name="select_join_campaign_store">选择参与活动的店铺</string>
+    <string name="select_join_pt_store">选择参与拼团的店铺</string>
+
+    <string name="lhpt_three">注：每日发放奖品，将根据您设置的奖品总数及活动总\n 天数，每日平均分配，发放。发完为止。</string>
+
+    <string name="create_success">创建成功</string>
+
+    <string name="pre_desc">1.购买可获得：插队券，玩偶，包间\n2.拼团成功奖励：5折优惠券\n1.购买可获得：插队券，玩偶，包间</string>
+
+    <string name="coupon_bu_ke_yong_desc">请填写不可用项目的详细说明…\n
+如：包间不可用，外卖不可用、法定节假日不可用</string>
+
+    <string name="coupon_nodate">  周六、日及法定节假日不可用\n
+    2018.12.12-2019.01.01</string>
+
+
+    <string name="coupon_noitem">  1.包间不可用\n
+    2.外卖不可用</string>
+    <string name="coupon_notes">  1.最终解释权归消费店铺所有\n
+    2.实际消费时间根据优惠券有效期为主</string>
+
+    <string name="campaign_preview_hb"> 海\n报
+   </string>
+
+    <string name="campaign_preview_yxzy"> 游\n戏\n主\n页
+   </string>
+    <string name="campaign_preview_xcxsy"> 小\n程\n序\n首\n页
+    </string>
+
+    <string name="campaign_preview_fxxg">  分\n享\n效\n果</string>
+
+    <string name="campaign_preview_hdzy"> 活\n动\n主\n页
+   </string>
+
+    <string name="time_tip">周一至周五 09:00 至22:00\n周六至周日 09:00 至22：00
+    </string>
+
+    <string name="text_text_view_kuozhan">#1.购买可获得：插队券，\n玩偶，\n包间\n#2.拼团成功奖励：5折优惠券\n1.购买可获得：插队券，\n#玩偶，包间</string>
+
+    <string name="feed_back">意见反馈
+    </string>
+    <string name="feed_back_msg">意见反馈记录
+    </string>
+    <string name="feed_back_msg_detail">意见反馈详情
+    </string>
+    <string name="no_data">暂无数据
+    </string>
+
+    <string name="pos_id_1">1.1 在pos系统上，建立和该会员卡相同的一 张会员卡。\n1.2 添加一个虚拟会员，并让该会员获得在 pos上，新建的对应会员卡。\n1.3 在pos上找到，虚拟会员的唯一身份代号， 有可能是手机号或是其它代号。\n1.4 将该代号，复制到该文本框。
+    </string>
+
+    <string name="pos_id_2"> 2.1 用户在使用小程序核销时，会显示该一 维码。\n2.2 您可以使用扫码枪，扫描该一维码，快 速在pos上快速选定会员。
+    </string>
+
+    <string name="is_display_content_top"> 若会员卡选择首页不可见，那么消费\n者，将无法在首页看到该会员卡，并\n进行领取或者购买。
+    </string>
+    <!--使用&lt;b>和&lt;b>来打印出<b></b> 这样的文字；“&lt;”表示“<”的意思； -->
+    <string name="campaign_like_coupon_">注：如果您设置的是多条件，不同条件下的集赞数量，需要遵循以下规则：条件1&lt;条件2&lt;条件3</string>
+    <string name="consume_coupon_tip">注：若多条件，则不同条件的金额要满足，条件1&lt;条件2&lt;条件3&lt;条件4</string>
+    <string name="campaign_like_coupon_tip">不同条件下的集赞数量，需要遵循规则：条件1&lt;条件2&lt;条件3</string>
+    <string name="consume_coupon_tip_">消费金额未按要求设置</string>
+    <!--<string name="consume_coupon_tip_">不同条件下的金额，需要遵循规则：条件1&lt;条件2&lt;条件3&lt;条件4</string>-->
+    <string name="trade_drawing_personal_desc">1.该认证信息会联合公安网进行验证，请认真填
+        写。\n2.注意，这里的信息需要与，您后面绑定的银行
+  卡预留的信息一致，否则会影响后续绑卡步骤。\n3.认证通过后，则资料不允许修改。</string>
+
+    <string name="trade_drawing_two_desc">1.提款时，会向改手机号发送验证码，因此必须
+        绑定手机号才提现。\n2.若要解绑手机号，请解绑后及时绑定新手机，
+   否则会影响正常支付业务。</string>
+
+
+    <string name="trade_drawing_three_desc">1.该银行卡，在银行中的预留信息，必须与实名
+        认证的预留信息一致。\n2.若解绑银行卡，请及时绑定新账号，以免造成
+   正常支付业务无法进行。</string>
+    <string name="auth_error">联合公安网，核对信息失败，\n请检查填写信息后再操作。</string>
+
+    <string name="trade_drawing_enterprise_desc">1. 收款账户只能绑定企业的对公账户。\n2. 不可修改收款账号。\n3. 企业名称需要和营业执照上的名称一致。\n4. 认证通过后，则资料不允许修改。</string>
+
+
+    <string name="get_verification_code">获取验证码</string>
+    <string name="company_zhizhao">企业营业执照\n（三证合一）</string>
+
+
+    <string name="collect_money_account_setting_desc">1.若费用直接到微信零钱，不需要手续费。\n2. 收款到银行卡，需要收取1%的手续费。</string>
+
+
+    <string name="collect_money_account_setting_wx_desc">1.绑定后，不可修改，若修改请联系客服。\n2.请输入真实的姓名，方便后续转账确认\n3.收款方，手机号，需要现成为本品牌的会员。\n4.收款方需在微信支付，实名认证，否则打款失败。\n5.单笔单日限额0.30—5000元。</string>
+
+
+    <string name="collect_money_account_setting_bank_desc">1.绑定后，不可修改，若修改请联系客服。\n2.付款到账实效为1-3日，最快次日到账。\n3.每笔按付款金额收取手续费，按金额0.1%收取，
+  最低1元，最高25元。\n4.只支持到个人银行卡，不支持到对公账户。</string>
+
+
+    <string name="collect_money_transfer_record_desc">不同到帐方式以及不同到账银行不同，请及时关注
+      收款账户，以 到账时间为准。</string>
+
+
+    <string name="pt_three_label">如果这个活动转发出去，你想通过什么样的文字描\n述，吸引顾客购买和传播呢</string>
+
+    <string name="expermission_camera">相机权限被拒绝，无法扫描</string>
+</resources>

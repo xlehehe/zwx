@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <!-- android:background="@drawable/item_home_list_round_corner"-->
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_home_expre_coupon_shadow_bg">
+
+        <LinearLayout
+            android:id="@+id/ll_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="87dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center|top"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:background="@drawable/ic_coupon_discount"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/padding_5"
+                            android:paddingLeft="@dimen/padding_10"
+                            android:text="￥"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_8" />
+
+                        <TextView
+                            android:id="@+id/tv_expre_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="@dimen/padding_5"
+                            android:paddingRight="@dimen/padding_10"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_expre_coupon_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:text="@string/text_daijinjuan"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_8" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="@dimen/padding_5"
+
+                android:layout_marginRight="@dimen/padding_5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_coupon_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:id="@+id/tv_coupon_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:ellipsize="end"
+
+                            android:singleLine="true"
+                            android:text="5元满汉全席卷"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:id="@+id/tv_expre_coupon_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="全年周六、周天不可用"
+                            android:textColor="@color/search_color_search_gray"
+                            android:textSize="@dimen/font_size_10" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_use"
+                        android:layout_width="@dimen/width_66"
+                        android:layout_height="@dimen/height_26"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:background="@drawable/style_home_btn_oranage_bg"
+                        android:text="@string/text_shop"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_12"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"/>
+
+                    <ImageView
+                        android:id="@+id/iv_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_margin="@dimen/margin_5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_coupon_use"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:background="@color/line_color_gray" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_use_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center|left"
+                        android:text="使用规则"
+                        android:textColor="@color/font_color_gray_light"
+                        android:textSize="@dimen/font_size_10"
+                        android:paddingLeft="@dimen/margin_5"/>
+
+                    <ImageView
+                        android:id="@+id/button"
+                        android:layout_width="18dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_down" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.zwx.library.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:orientation="vertical"
+        app:ael_duration="400"
+        app:ael_expanded="false">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center|left"
+            android:padding="@dimen/padding_10"
+            android:text="
+    不可与本店其他优惠券叠加使用.\n
+    订单满100元可用"
+            android:textColor="@color/font_color_gray_light"
+            android:textSize="@dimen/font_size_10" />
+    </com.zwx.library.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/height_20"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="240dp"
+                android:layout_height="430dp"
+
+                android:orientation="vertical"
+                android:background="@drawable/ic_coupon_new_pre_bg"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|top"
+                android:layout_marginTop="20dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/height_50"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/ll_image"
+                            android:layout_width="160dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_10"
+
+                            android:background="@drawable/ic_member_card_default"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_10"
+                                android:orientation="horizontal">
+
+                                <com.zwx.library.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/circle_view"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity=""
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:src="@drawable/ic_logo_default"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="0dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_card_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:gravity="center"
+                                    android:text="会员卡"
+                                    android:textColor="@color/member_card_style_color_black"
+                                    android:textSize="6sp" />
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="@dimen/margin_40">
+                                <TextView
+                                    android:id="@+id/tv_condition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="直接领取"
+                                    android:textSize="6sp"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_alignParentLeft="true"/>
+
+                                <TextView
+                                    android:id="@+id/tv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_marginRight="@dimen/margin_10"
+                                    android:gravity="center"
+
+                                    android:text=""
+                                    android:textColor="@color/member_card_style_color_black"
+                                    android:textSize="6sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/margin_10">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="2"
+                                android:gravity="center|right">
+                                <View
+                                    android:layout_width="40dp"
+                                    android:layout_height="1dp"
+                                    android:background="@mipmap/ic_line_horizontal"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="1.5"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="使用详情"
+                                    android:textColor="#0F1D37"
+                                    android:textSize="@dimen/font_size_8"
+                                    android:drawableLeft="@drawable/ic_coupon_detail_des"
+                                    android:drawablePadding="5dp"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="2"
+                                android:gravity="center|left">
+                                <View
+                                    android:layout_width="40dp"
+                                    android:layout_height="1dp"
+                                    android:background="@mipmap/ic_line_horizontal"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10"
+                            android:layout_marginTop="@dimen/margin_10">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="center|left"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:singleLine="false"
+                                android:text="会员卡详情"
+                                android:textColor="@color/font_color_gray_deep"
+                                android:textSize="@dimen/font_size_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_10">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_coupon_pre_gray_dot"
+                                    android:scaleType="fitXY"
+                                    android:layout_gravity="center"/>
+                                <TextView
+                                    android:id="@+id/tv_brand_use"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:gravity="center|left"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:singleLine="false"
+                                    android:text="明湖小楼旗下店铺可用。"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_8"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_gravity="center"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_10">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_coupon_pre_gray_dot"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_gravity="center|top"/>
+                                <TextView
+                                    android:id="@+id/tv_rights_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:gravity="center|left"
+                                    android:text="该会员可以享受，9.8折优惠，每周每天可 用，限本人使用。"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_8"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_gravity="center"/>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_share"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_10">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_coupon_pre_gray_dot"
+                                    android:scaleType="fitXY"
+                                    android:layout_gravity="center|top"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_share"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:gravity="center|left"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"
+                                        android:singleLine="false"
+                                        android:text="会员权益，不与店内、网上等其它优惠同享。"
+                                        android:textColor="@color/color_gray_deep"
+                                        android:textSize="@dimen/font_size_8"
+                                        android:layout_marginLeft="@dimen/margin_10"
+                                        android:layout_gravity="center|top"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_10">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_coupon_pre_gray_dot"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_gravity="center|top"/>
+                                <TextView
+                                    android:id="@+id/tv_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:gravity="center|left"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:singleLine="false"
+                                    android:text="本会员卡使用期限：获得会员卡12个月可使用"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_8"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_gravity="center"/>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_10">
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_coupon_pre_gray_dot"
+                                    android:scaleType="fitXY"
+                                    android:layout_gravity="center|top"
+                                    android:layout_marginTop="@dimen/dp_4"/>
+                                <TextView
+                                    android:id="@+id/tv_remark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:gravity="center|left"
+                                    android:text="最终解释权，归店铺所有。"
+                                    android:textColor="@color/color_gray_deep"
+                                    android:textSize="@dimen/font_size_8"
+                                    android:layout_marginLeft="@dimen/margin_10"
+                                    android:layout_gravity="center"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/ll_content"
+                android:layout_marginLeft="@dimen/margin_40">
+                <LinearLayout
+                    android:id="@+id/ll_dis_top"
+                    android:layout_width="@dimen/height_30"
+                    android:layout_height="@dimen/height_30"
+                    android:gravity="center|left"
+                    android:layout_marginRight="@dimen/margin_10">
+
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_clear"
+                        android:layout_gravity="top|left"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btn_use"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/height_35"
+                android:background="@drawable/shape_btn_blue_corner"
+                android:text="关闭预览"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

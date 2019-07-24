@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_gravity="center">
+            <com.zwx.library.tablayout.widget.MsgView
+                xmlns:mv="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/status_msg"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="2sp"
+                mv:mv_backgroundColor="@color/msg_color"
+                mv:mv_isRadiusHalfHeight="true"
+                mv:mv_strokeColor="#ffffff"
+                mv:mv_strokeWidth="1dp"/>
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/status_msg"
+                android:layout_centerInParent="true"
+                android:gravity="center|left"
+                android:paddingRight="@dimen/margin_10"
+                android:text="功能建议"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"/>
+
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_dealResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableRight="@drawable/ic_next"
+            android:gravity="center|right"
+            android:layout_gravity="center"
+            android:text="未处理"
+            android:textColor="@color/red_dark"
+            android:textSize="@dimen/font_size_14"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:text="济南市，"
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_12"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|right"
+            android:layout_gravity="right"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:text="2019.02.29  12:11:36 "
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_10"
+            android:layout_marginLeft="@dimen/margin_5"
+
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

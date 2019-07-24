@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:background="@drawable/dialog_confirm_cancel_util_bg" >
+        <!-- 标题 -->
+
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin_20"
+                android:text="快递邮寄"
+                android:textColor="@color/color_dialog_title"
+                android:textSize="@dimen/confirm_cancel_util_dialog_title_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"/>
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/margin_10">
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_clear_gray"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 标题下的中横线 -->
+        <TextView
+            android:id="@+id/delever_up_message"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_top"
+            android:layout_marginLeft="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:layout_marginRight="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:background="@color/confirm_cancel_util_dialog_delever_h_color"
+            android:visibility="invisible"/>
+        <!-- 内容 -->
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/delever_up_message"
+            android:layout_marginBottom="@dimen/margin_5">
+            <RelativeLayout
+                android:id="@+id/rl_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+                <TextView
+                    android:id="@+id/tv_post_company_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="快递公司"
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_good_manage_xing"
+                     android:layout_toRightOf="@id/tv_post_company_label"
+                     android:layout_centerInParent="true"
+                     android:layout_marginLeft="@dimen/margin_10"/>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@drawable/ic_edt_round_bg"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入快递公司名称…"
+                    android:maxLength="30"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:nextFocusForward="@id/edt_remark"
+
+                    android:text=""
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_company_name_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:text="(0/30)"
+                    android:textColor="#8E939A"
+                    android:textSize="@dimen/font_size_12" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/rl_post_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20"
+                    >
+                    <TextView
+                        android:id="@+id/tv_order_id_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="快递单号"
+                        android:textColor="@color/color_dialog_title"
+                        android:textSize="@dimen/font_size_14"
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"/>
+                    <ImageView
+                        android:id="@+id/iv_xing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_good_manage_xing"
+                        android:layout_toRightOf="@id/tv_order_id_label"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                    <ImageView
+                        android:id="@+id/iv_qrc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_scan"
+                        android:layout_toRightOf="@id/iv_xing"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                </RelativeLayout>
+
+                <!--<EditText
+                    android:id="@+id/edt_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:gravity="left|top"
+                    android:textColor="@color/confirm_cancel_util_dialog_message_color"
+                    android:text=""
+                    android:textSize="13dp"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:numeric="integer"
+                    android:maxLines="1"
+
+                    android:background="@drawable/shape_campaign_edit_corner"
+                    android:hint="请输入不超过6位的数字"/>-->
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edt_order_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_edt_round_bg"
+                android:gravity="top"
+                android:hint="请输入或扫描快递单号…"
+                android:maxLength="30"
+                android:maxLines="10"
+                android:minLines="3"
+                android:nextFocusForward="@id/edt_remark"
+                android:text=""
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_12"
+                android:padding="8dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+
+                android:layout_marginBottom="@dimen/margin_5"/>
+
+
+        </LinearLayout>
+
+        <!-- 底部按钮区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_message"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent" >
+
+            <!-- 取消按钮 -->
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_confirm_cancel_util_left_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_left_btn"
+                android:textColor="#909399"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_confirm_submit_util_right_btn_bg_white"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_right_btn"
+                android:textColor="@color/color_dialog_submit"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

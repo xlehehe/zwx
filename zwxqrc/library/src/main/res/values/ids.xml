@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bannerContainer" type="id"/>
+    <item name="bannerViewPager" type="id"/>
+    <item name="circleIndicator" type="id"/>
+    <item name="numIndicator" type="id"/>
+    <item name="titleView" type="id"/>
+    <item name="bannerTitle" type="id"/>
+    <item name="numIndicatorInside" type="id"/>
+    <item name="indicatorInside" type="id"/>
+    <item name="bannerDefaultImage" type="id"/>
+
+
+    <item type="id" name="bgaqrcode_camera_preview" />
+
+
+    <item name="BaseQuickAdapter_viewholder_support" type="id"/>
+    <item name="BaseQuickAdapter_swiping_support" type="id"/>
+    <item name="BaseQuickAdapter_dragging_support" type="id"/>
+    <item name="BaseQuickAdapter_databinding_support" type="id"/>
+   <!-- <item name="tv_start_time_1" type="id">tv_start_time_1</item>
+    <item name="tv_end_time_1" type="id">tv_end_time_1</item>
+    <item name="tv_start_time_2" type="id">tv_start_time_2</item>
+    <item name="tv_end_time_2" type="id">tv_end_time_2</item>
+    <item name="tv_start_time_3" type="id">tv_start_time_3</item>
+    <item name="tv_end_time_3" type="id">tv_end_time_3</item>
+    <item name="tv_start_time_4" type="id">tv_start_time_4</item>
+    <item name="tv_end_time_4" type="id">tv_end_time_4</item>
+    <item name="tv_start_time_5" type="id">tv_start_time_5</item>
+    <item name="tv_end_time_5" type="id">tv_end_time_5</item>
+    <item name="tv_start_time_6" type="id">tv_start_time_6</item>
+    <item name="tv_end_time_6" type="id">tv_end_time_6</item>
+
+
+    <item name="tv_start_time_7" type="id">tv_start_time_7</item>
+    <item name="tv_end_time_7" type="id">tv_end_time_7</item>
+    <item name="tv_start_time_8" type="id">tv_start_time_8</item>
+    <item name="tv_end_time_8" type="id">tv_end_time_8</item>
+    <item name="tv_start_time_9" type="id">tv_start_time_9</item>
+    <item name="tv_end_time_9" type="id">tv_end_time_9</item>
+    <item name="tv_start_time_10" type="id">tv_start_time_10</item>
+    <item name="tv_end_time_10" type="id">tv_end_time_10</item>
+
+    <item name="tv_start_time_11" type="id">tv_start_time_11</item>
+    <item name="tv_end_time_11" type="id">tv_end_time_11</item>
+    <item name="tv_start_time_12" type="id">tv_start_time_12</item>
+    <item name="tv_end_time_12" type="id">tv_end_time_12</item>
+
+
+    <item name="tv_start_time_13" type="id">tv_start_time_13</item>
+    <item name="tv_end_time_13" type="id">tv_end_time_13</item>
+    <item name="tv_start_time_14" type="id">tv_start_time_14</item>
+    <item name="tv_end_time_14" type="id">tv_end_time_14</item>-->
+
+
+<!--
+解决异常
+D:\ZWXWork\work\zwxqrc\library\build\intermediates\packaged_res\debug\values\values.xml:190:5-62: AAPT: error: <item> inner element must either be a resource reference or empty.
+
+-->
+    <item name="tv_start_time_1" type="id"></item>
+    <item name="tv_end_time_1" type="id"></item>
+    <item name="tv_start_time_2" type="id"></item>
+    <item name="tv_end_time_2" type="id"></item>
+    <item name="tv_start_time_3" type="id"></item>
+    <item name="tv_end_time_3" type="id"></item>
+    <item name="tv_start_time_4" type="id"></item>
+    <item name="tv_end_time_4" type="id"></item>
+    <item name="tv_start_time_5" type="id"></item>
+    <item name="tv_end_time_5" type="id"></item>
+    <item name="tv_start_time_6" type="id"></item>
+    <item name="tv_end_time_6" type="id"></item>
+
+
+    <item name="tv_start_time_7" type="id"></item>
+    <item name="tv_end_time_7" type="id"></item>
+    <item name="tv_start_time_8" type="id"></item>
+    <item name="tv_end_time_8" type="id"></item>
+    <item name="tv_start_time_9" type="id"></item>
+    <item name="tv_end_time_9" type="id"></item>
+    <item name="tv_start_time_10" type="id"></item>
+    <item name="tv_end_time_10" type="id"></item>
+
+    <item name="tv_start_time_11" type="id"></item>
+    <item name="tv_end_time_11" type="id"></item>
+    <item name="tv_start_time_12" type="id"></item>
+    <item name="tv_end_time_12" type="id"></item>
+
+
+    <item name="tv_start_time_13" type="id"></item>
+    <item name="tv_end_time_13" type="id"></item>
+    <item name="tv_start_time_14" type="id"></item>
+    <item name="tv_end_time_14" type="id"></item>
+
+    <!--<item name="tv_start_time_1" type="id">tv_start_time_1</item>
+    <item name="tv_end_time_1" type="id">tv_end_time_1</item>
+    <item name="tv_start_time_2" type="id">tv_start_time_2</item>
+    <item name="tv_end_time_2" type="id">tv_end_time_2</item>
+    <item name="tv_start_time_3" type="id">tv_start_time_3</item>
+    <item name="tv_end_time_3" type="id">tv_end_time_3</item>
+    <item name="tv_start_time_4" type="id">tv_start_time_4</item>
+    <item name="tv_end_time_4" type="id">tv_end_time_4</item>
+    <item name="tv_start_time_5" type="id">tv_start_time_5</item>
+    <item name="tv_end_time_5" type="id">tv_end_time_5</item>
+    <item name="tv_start_time_6" type="id">tv_start_time_6</item>
+    <item name="tv_end_time_6" type="id">tv_end_time_6</item>
+
+
+    <item name="tv_start_time_7" type="id">tv_start_time_7</item>
+    <item name="tv_end_time_7" type="id">tv_end_time_7</item>
+    <item name="tv_start_time_8" type="id">tv_start_time_8</item>
+    <item name="tv_end_time_8" type="id">tv_end_time_8</item>
+    <item name="tv_start_time_9" type="id">tv_start_time_9</item>
+    <item name="tv_end_time_9" type="id">tv_end_time_9</item>
+    <item name="tv_start_time_10" type="id">tv_start_time_10</item>
+    <item name="tv_end_time_10" type="id">tv_end_time_10</item>
+
+    <item name="tv_start_time_11" type="id">tv_start_time_11</item>
+    <item name="tv_end_time_11" type="id">tv_end_time_11</item>
+    <item name="tv_start_time_12" type="id">tv_start_time_12</item>
+    <item name="tv_end_time_12" type="id">tv_end_time_12</item>
+
+
+    <item name="tv_start_time_13" type="id">tv_start_time_13</item>
+    <item name="tv_end_time_13" type="id">tv_end_time_13</item>
+    <item name="tv_start_time_14" type="id">tv_start_time_14</item>
+    <item name="tv_end_time_14" type="id">tv_end_time_14</item>-->
+</resources>

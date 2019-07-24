@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|left"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tv_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="时间："
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_14"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center|left"
+            android:text="2018.11.18 18:22:36"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/ic_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rl_order_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10">
+
+
+            <TextView
+                android:id="@+id/tv_order_num_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|left"
+                android:text="订单编号："
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/height_80"
+                android:gravity="center|right"
+                android:text="2353254543543543"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/ic_line_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tv_red_amt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|left"
+            android:text="红包变化："
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_14" />
+
+
+        <TextView
+            android:id="@+id/tv_red_amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/height_80"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center|right"
+            android:text="+10"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tv_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center|left"
+            android:text="原因："
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_14" />
+
+
+        <TextView
+            android:id="@+id/tv_descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/height_80"
+            android:layout_marginRight="@dimen/margin_10"
+            android:ellipsize="end"
+            android:gravity="center|right"
+            android:maxLines="2"
+            android:text="15645345275(王大锤)购买特价烤鸭购买
+特价烤鸭你的好友购买特价烤鸭*fsdfdfsdfsdfsdfsdfsdfdsfs"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+    </RelativeLayout>
+
+</LinearLayout>

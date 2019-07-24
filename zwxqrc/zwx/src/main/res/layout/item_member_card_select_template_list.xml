@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5"
+    android:background="@drawable/shap_campaign_list_border">
+
+    <TextView
+        android:id="@+id/tv_constant_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/color_gray_deep"
+        android:layout_alignParentLeft="true"
+        android:gravity="center|top"
+
+        />
+    <TextView
+        android:id="@+id/tv_constant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="该会员可以享受，9.8折优惠，每周每天可 用，限本人使用。"
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/color_gray_deep"
+        android:layout_toRightOf="@id/tv_constant_num"
+        android:gravity="top|left"/>
+
+</RelativeLayout>

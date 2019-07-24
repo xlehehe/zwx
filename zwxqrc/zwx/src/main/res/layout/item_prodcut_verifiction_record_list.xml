@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_edt_round_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|left"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tv_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="商品："
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|left"
+            android:text="春节欢度海鲜超级大礼包，968促销商品抢..."
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10"
+        android:orientation="horizontal">
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:orientation="horizontal"
+             android:layout_alignParentLeft="true"
+             android:layout_centerInParent="true">
+
+             <TextView
+                 android:id="@+id/tv_veri_zhang_label"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center|left"
+                 android:text="核销张数(张)："
+                 android:textColor="@color/color_gray_light"
+                 android:textSize="@dimen/font_size_14"
+                 />
+
+
+             <TextView
+                 android:id="@+id/tv_veri_zhang"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center|left"
+                 android:layout_marginRight="@dimen/margin_10"
+                 android:text="10"
+                 android:textColor="@color/color_gray_dark"
+                 android:textSize="@dimen/font_size_14"
+                 />
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:gravity="center|left">
+
+            <TextView
+                android:id="@+id/tv_red_id_label"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="销售金额："
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_sale_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="123.45元"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="红包抵现金额："
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_red_packet_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="999999.00元"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:gravity="center|left">
+
+            <TextView
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="实付金额："
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_pay_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="1234567.45元"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

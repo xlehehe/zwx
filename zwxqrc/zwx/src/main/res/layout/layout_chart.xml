@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true">
+
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|left"
+                android:text="核销桌数趋势"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16"
+                android:typeface="serif"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="(2018/11/17-2018/11/17)"
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_12"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="01"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/ll_left"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:visibility="invisible">
+
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:gravity="center"
+                android:background="@color/font_color_blue"
+                android:layout_marginRight="@dimen/margin_5"/>
+            <TextView
+                android:id="@+id/tv_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="新增数"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_12"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <com.zwx.library.banner.view.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"/>
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_below="@+id/rv_checkbox"/>
+
+  <!--  <com.zwx.scan.app.widget.indicator.MagicIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_25"
+        android:layout_gravity="center"
+        android:background="@color/white" />-->
+
+</LinearLayout>

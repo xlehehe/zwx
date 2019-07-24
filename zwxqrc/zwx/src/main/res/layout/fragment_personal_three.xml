@@ -1,0 +1,274 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.personal.PersonalTwoFragment"
+    android:background="@color/divide_gray_color">
+    <include layout="@layout/layout_common_title"/>
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_personal_bg"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.zwx.library.circleimageview.CircleImageView
+            android:id="@+id/circle_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/ic_logo"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="王大锤"
+            android:textSize="@dimen/margin_15"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_5"/>
+        <TextView
+            android:id="@+id/tv_role_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="（店长）"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/height_50"
+            android:layout_marginLeft="@dimen/height_50"/>
+
+        <TextView
+            android:id="@+id/tv_store_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="所属店铺：明湖小楼1店、明湖小楼2店"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/height_50"
+            android:layout_marginLeft="@dimen/height_50"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_msg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_account_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消息"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+
+                    android:drawableLeft="@drawable/ic_message"
+                    android:drawablePadding="@dimen/margin_10"/>
+
+                <!-- <com.zwx.library.tablayout.widget.MsgView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="9"
+                     android:textColor="@color/white"
+                     android:layout_toRightOf="@id/tv_account_label"
+                     android:layout_alignTop="@id/tv_account_label"/>-->
+                <com.zwx.library.tablayout.widget.MsgView
+                    android:id="@+id/mv_msg_tip"
+                    xmlns:mv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="@dimen/width_15"
+                    android:layout_height="@dimen/width_15"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="10"
+                    android:textSize="8sp"
+                    mv:mv_backgroundColor="@color/msg_color"
+                    mv:mv_isRadiusHalfHeight="true"
+                    mv:mv_strokeColor="#ffffff"
+                    mv:mv_strokeWidth="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_account_label"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/margin_10"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_auth"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_10"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_auth_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付认证"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_personal_auth"
+                android:drawablePadding="@dimen/margin_10"/>
+
+
+            <TextView
+                android:id="@+id/tv_auth_state"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/ic_next"
+                android:gravity="center|right"
+                android:hint="未完成"
+                android:text=""
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_system"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_10">
+            <TextView
+                android:id="@+id/tv_stystem_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统管理"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/color_gray_deep"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_system_manage"
+                android:drawablePadding="@dimen/margin_10"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/margin_10"/>
+
+
+        </RelativeLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/ic_line_horizontal"
+            android:layout_marginLeft="@dimen/margin_10"/>
+        <RelativeLayout
+            android:id="@+id/rl_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_feedback_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="意见反馈"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+
+                    android:drawableLeft="@drawable/ic_personal_feed_back_"
+                    android:drawablePadding="@dimen/margin_10"/>
+
+                <!-- <com.zwx.library.tablayout.widget.MsgView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="9"
+                     android:textColor="@color/white"
+                     android:layout_toRightOf="@id/tv_account_label"
+                     android:layout_alignTop="@id/tv_account_label"/>-->
+                <com.zwx.library.tablayout.widget.MsgView
+                    android:id="@+id/feedback_msg_tip"
+                    xmlns:mv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text=""
+                    android:textSize="2sp"
+                    mv:mv_backgroundColor="@color/msg_color"
+                    mv:mv_isRadiusHalfHeight="true"
+                    mv:mv_strokeColor="#ffffff"
+                    mv:mv_strokeWidth="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_feedback_label"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/margin_10"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_yxzy"
+        android:layout_width="221dp"
+        android:layout_height="370dp"
+        android:orientation="vertical"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/ic_preview_white_bg">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_jz_yxzy"
+                        android:layout_width="match_parent"
+                        android:layout_height="89dp"
+                        android:src="@drawable/ic_load_fail"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"/>
+
+                    <!-- <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/ic_pt_yxzy_prize_bg"
+                         android:orientation="horizontal"
+                         android:gravity="center">
+                         <ImageView
+                             android:id="@+id/iv_pt_yxzy_coupon_image"
+                             android:layout_width="188dp"
+                             android:layout_height="90dp"
+                             android:layout_marginLeft="@dimen/margin_18"
+                             android:layout_marginRight="@dimen/margin_18"
+                             android:background="@drawable/ic_pt_yxzy_coupon"
+                             android:layout_gravity="center"
+                             android:layout_marginBottom="3dp"/>
+
+                     </LinearLayout>-->
+
+                    <!--<com.zwx.scan.app.widget.MyGridView
+                        android:id="@+id/grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:columnWidth="@dimen/height_40"
+                        />-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_campaign_like_hdzy_noopen"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_8"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_campaign_like_hdzy_open"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_10"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_campaign_like_hdzy_noopen"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_10"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剩余时间："
+                            android:textSize="8sp"
+                            android:textColor="@color/account_manage_gray_color"/>
+
+                        <TextView
+                            android:id="@+id/tv_jz_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:46:32"
+                            android:textSize="8sp"
+                            android:textColor="@color/account_manage_gray_color"
+                            android:layout_marginLeft="2dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="再邀请4人点赞，即可打开第一个宝箱"
+                        android:textSize="8sp"
+                        android:textColor="@color/account_manage_gray_color"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="已有3人集赞"
+                            android:textSize="7sp"
+                            android:textColor="@color/account_manage_gray_color"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_campaign_like_hdzy_join"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_8"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看全部"
+                            android:textSize="8sp"
+                            android:drawableRight="@drawable/ic_arrow_down_2x"
+                            android:drawablePadding="5dp"
+                            android:textColor="@color/account_manage_gray_color"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_10"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/status_height_24"
+                        android:background="@drawable/style_home_btn_red_bg"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="邀请好友助力"
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/margin_5"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/status_height_24"
+                        android:background="@drawable/style_home_btn_red_bg"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:text="点击领取奖励"
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/margin_5"/>
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20">
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_20">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center|left">
+                            <ImageView
+                                android:layout_width="2.5dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/ic_left_bg"
+                                android:layout_gravity="center|left"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:text="活动规则"
+                                android:textColor="@color/color_gray_dark"
+                                android:textSize="8sp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_gravity="center|left"
+                                android:gravity="center|left"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="活动时间："
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"/>
+
+                            <TextView
+                                android:id="@+id/tv_time2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2018-12-3~2018-12-31"
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"
+                                android:layout_marginLeft="2dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="活动方式："
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"/>
+
+                            <TextView
+                                android:id="@+id/tv_campaign_fangshi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="活动方式：邀请好友助力，赢取奖励，3人助力可得5元优惠券,
+               5人助力可得20元优惠券，10人助力可得50元优惠
+               券"
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"
+                                android:layout_marginLeft="2dp"
+                                android:gravity="center|left"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="活动奖励："
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"/>
+
+                            <TextView
+                                android:id="@+id/tv_campaign_jiangli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="达到邀请人数即可领取相应奖励。"
+                                android:textSize="8sp"
+                                android:textColor="@color/color_gray_deep"
+                                android:layout_marginLeft="2dp"
+                                android:gravity="center|left"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.member.MemberCardNewTwoActivity">
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/layout_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@id/ll_top"
+        android:background="@drawable/ic_line_horizontal" />
+
+    <include
+        android:id="@+id/step_view_two"
+        layout="@layout/layout_step_view_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_centerInParent="true" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/step_view_two"
+            android:layout_marginBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/margin_10"
+                    android:text="卡面内容设置"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:id="@+id/ll_image"
+                    android:layout_width="240dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_30"
+                    android:background="@drawable/ic_member_card_default"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:orientation="horizontal">
+
+                        <com.zwx.library.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/circle_view"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity=""
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:src="@drawable/ic_logo_default"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/tv_card_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:gravity="center"
+                            android:text="会员卡"
+
+                            android:textColor="@color/member_card_style_color_black"
+                            android:textSize="@dimen/font_size_12" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/margin_70">
+
+                        <TextView
+                            android:id="@+id/tv_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="直接领取"
+                            android:textSize="@dimen/font_size_12"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_alignParentLeft="true"/>
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:gravity="center"
+
+                            android:text="有效期：36个月"
+                            android:textColor="@color/member_card_style_color_black"
+                            android:textSize="@dimen/font_size_12" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_card_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20">
+
+                            <TextView
+                                android:id="@+id/tv_card_style_title_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_40"
+
+                                android:layout_centerInParent="true"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="卡面样式选择"
+                                android:textColor="@color/font_color_blue"
+                                android:textSize="@dimen/font_size_14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:layout_toRightOf="@id/tv_card_style_title_left"
+                                android:text="*"
+                                android:textColor="@color/color_xing"
+                                android:textSize="@dimen/font_size_14" />
+                        </RelativeLayout>
+
+
+                        <View
+                            android:id="@+id/left_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_30"
+                            android:layout_marginRight="@dimen/margin_30"
+                            android:background="@color/btn_color_blue" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_card_right"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_card_content_title_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_40"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_30"
+                            android:layout_marginRight="@dimen/margin_30"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="卡面内容设置"
+                            android:textColor="@color/campaign_new_font_gray"
+                            android:textSize="@dimen/font_size_14" />
+
+                        <View
+                            android:id="@+id/right_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:background="@color/btn_color_blue" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_member_card_style_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_card_template"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_card_template_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_40"
+
+                                android:layout_centerInParent="true"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="从模版选择"
+                                android:textColor="@color/font_color_blue"
+                                android:textSize="@dimen/font_size_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_line_vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_card_material"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_card_material_right"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_40"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/margin_30"
+                                android:layout_marginRight="@dimen/margin_30"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="我的素材"
+                                android:textColor="@color/color_gray_deep"
+                                android:textSize="@dimen/font_size_14" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingRight="@dimen/margin_20">
+
+                        <com.zwx.scan.app.widget.MyGridView
+                            android:id="@+id/grid_view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="100dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="2"
+
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="5dp" />
+                        <com.zwx.scan.app.widget.MyGridView
+                            android:id="@+id/grid_view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="100dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="2"
+
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_member_card_content_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/margin_20"
+                    android:visibility="gone">
+                    <com.zwx.scan.app.widget.MyListView
+                        android:id="@+id/list_view_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_20">
+                        <TextView
+                            android:id="@+id/tv_card_name_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:text="字体颜色"
+                            android:textColor="@color/color_gray_dark"
+                            android:textSize="@dimen/font_size_14"
+                            android:gravity="center|left"/>
+                        <com.zwx.scan.app.widget.MyGridView
+                            android:id="@+id/grid_view_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="100dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="4"
+
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="5dp"
+                            android:layout_marginTop="@dimen/margin_5"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+        </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:background="@drawable/shape_btn_blue_stroke"
+                        android:text="上一步"
+                        android:textColor="@color/btn_color_blue"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/shape_btn_blue_corner"
+                        android:text="启用"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/shape_btn_blue_corner"
+                        android:text="保存"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_16" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_pre"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:background="@drawable/shape_btn_blue_stroke"
+                        android:text="预览"
+                        android:textColor="@color/btn_color_blue"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

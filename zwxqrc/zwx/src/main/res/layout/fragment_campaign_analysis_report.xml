@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_member"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_join"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_20" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="参与活动人数"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_12" />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="match_parent"
+            android:background="@color/line_color_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_campaign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_get"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_20" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="优惠券领取数量"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_12"
+                />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_staff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_receive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_20" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="优惠券回收数量"
+                android:textColor="@color/font_color_gray_dark"
+                android:textSize="@dimen/font_size_12" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_chart_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center|left"
+            android:text="优惠券领取数量趋势"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_16"
+            android:typeface="serif"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="(2018/11/17-2018/11/17)"
+            android:textColor="@color/color_gray_light"
+            android:textSize="@dimen/font_size_14"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10">
+      <!--  <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_alignParentLeft="true"/>
+        </LinearLayout>-->
+
+
+       <!-- <com.github.mikephil.charting.charts.BarChart
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_weight="5"
+            android:id="@+id/chart"
+            android:layout_marginTop="@dimen/margin_20"/>-->
+
+        <com.zwx.library.banner.view.CustomViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"/>
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_below="@+id/rv_checkbox"/>
+
+
+       <!-- <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="18dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ic_arrow_right"/>
+        </LinearLayout>-->
+    </LinearLayout>
+
+
+</LinearLayout>

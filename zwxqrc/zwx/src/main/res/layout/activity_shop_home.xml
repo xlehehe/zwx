@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_shop_home"
+    android:layout_width="218dp"
+    android:layout_height="353dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="25dp"
+    android:layout_marginLeft="13dp"
+    android:layout_marginRight="13dp"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_48"
+                android:text="四季明湖"
+                android:textSize="@dimen/font_size_12"
+                android:textColor="@color/font_color_gray_dark"
+                android:gravity="center"
+                android:layout_centerInParent="true"/>
+        <include layout="@layout/layout_line_horizontal" />
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_shop_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="四季明湖"
+                            android:textColor="@color/font_color_gray_deep"
+                            android:textSize="@dimen/font_size_12" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:background="@drawable/shape_btn_gray_corner_border"
+                            android:drawablePadding="@dimen/margin_5"
+                            android:drawableRight="@drawable/ic_arrow_down"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10"
+                            android:text="恒隆广场店"
+                            android:textColor="@color/font_color_gray_dark"
+                            android:textSize="@dimen/font_size_10" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_20"
+                        android:layout_below="@+id/ll_shop_name"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_business"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_home_like_time"
+                            android:drawablePadding="@dimen/margin_5"
+                            android:text="营业中"
+                            android:textColor="@color/shop_font_color_gray"
+                            android:textSize="@dimen/font_size_10" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:background="@color/line_color_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="10:00-22:00"
+                            android:textColor="@color/color_gray_deep"
+                            android:textSize="@dimen/font_size_10" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_shop_avatar" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/ic_line_horizontal"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:drawablePadding="@dimen/margin_5"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="泉城路188号恒隆广场西翼6层"
+                            android:textColor="@color/shop_font_color_gray"
+                            android:textSize="@dimen/font_size_10" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_below="@+id/ll_shop_name"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_time2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="30分钟"
+                                android:textColor="@color/color_gray_deep"
+                                android:textSize="@dimen/font_size_10"
+                                android:layout_marginLeft="15dp"/>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:background="@color/line_color_gray" />
+
+                            <TextView
+                                android:id="@+id/tv_location2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="距您2.6km"
+                                android:textColor="@color/color_gray_deep"
+                                android:textSize="@dimen/font_size_10" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@color/line_color_gray" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_tel" />
+
+                </LinearLayout>
+
+               <!-- <com.zwx.library.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:banner_layout="@layout/banner_custom_viewpager"
+                    app:delay_time="5000"
+                    app:indicator_drawable_selected="@drawable/ic_banner_selected"
+                    app:indicator_drawable_unselected="@drawable/ic_banner_unselect"
+                    app:indicator_height="4dp"
+                    app:indicator_margin="3dp"
+                    android:layout_marginTop="@dimen/margin_10"/>-->
+                <ImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_70" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_weight="8"
+                        android:drawableLeft="@drawable/ic_left_bg"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:text="@string/text_select_all_coupon"
+                        android:textColor="@color/font_color_gray_deep"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:text="@string/text_select_all"
+                        android:textColor="@color/font_color_gray_light"
+                        android:textSize="@dimen/font_size_10" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_member_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_weight="8"
+                        android:drawableLeft="@drawable/ic_left_bg"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:text="@string/text_member"
+                        android:textColor="@color/font_color_gray_deep"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_member_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="1/3"
+                        android:paddingRight="@dimen/margin_10"
+                        android:textColor="@color/font_color_gray_light"
+                        android:textSize="@dimen/font_size_10" />
+                </LinearLayout>
+
+                
+                <com.zwx.library.banner.MZBanner
+                    android:id="@+id/banner_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="10dp"
+                    app:open_mz_mode="true"
+                    app:middle_page_cover="false"
+                    app:canLoop="false"
+                    app:indicatorAlign="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_member_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:text="七夕情侣卡 | 金卡"
+                    android:paddingRight="@dimen/margin_10"
+                    android:textColor="@color/font_color_gray_light"
+                    android:textSize="@dimen/font_size_10"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_campaign_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_weight="8"
+                    android:drawableLeft="@drawable/ic_left_bg"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:text="@string/text_campaign"
+                    android:textColor="@color/font_color_gray_deep"
+                    android:textSize="@dimen/font_size_16" />
+
+                <com.zwx.app.widget.MyListView
+                    android:id="@+id/list_view_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:dividerHeight="@dimen/margin_10"
+                    android:divider="@color/white"/>
+
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+    <RadioGroup
+        android:id="@+id/rg_coupon_campaign"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_40"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_campaign"
+            style="@style/main_tab_bottom2"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_selected2"
+            android:text="首页"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_coupon_zj"
+            style="@style/main_tab_bottom2"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_my_unselect2"
+            android:text="我的"
+            android:checked="false"/>
+
+    </RadioGroup>
+
+
+</RelativeLayout>

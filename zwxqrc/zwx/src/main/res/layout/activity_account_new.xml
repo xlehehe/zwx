@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.accountmanage.AccountNewActivity">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/layout_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/layout_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@id/ll_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_marginBottom="@dimen/margin_70">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_label_left"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center|left"
+                    android:text="@string/jichushezhi"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16" />
+
+                <include layout="@layout/layout_line_horizontal" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_store_manager_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="用户姓名"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <com.zwx.scan.app.widget.ContainsEmojiEditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_35"
+                        android:background="@color/white"
+                        android:hint="请输入用户名称"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:gravity="center|right"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_marginLeft="@dimen/height_70"/>
+                  <!--  <TextView
+                        android:id="@+id/store_manager_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:gravity="center|right"
+                        android:text="17788886666"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />-->
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_store_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="账号"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/edt_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_35"
+                        android:background="@color/white"
+                        android:hint="建议使用手机号码或邮箱"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:gravity="center|right"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_marginLeft="@dimen/height_40"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="密码"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <EditText
+                        android:id="@+id/edt_psd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_35"
+                        android:background="@color/white"
+                        android:hint="初始默认密码为123456"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color_gray"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:gravity="center|right"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:layout_marginLeft="@dimen/height_40"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_select_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_select_store_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="权限范围"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14" />
+
+
+                    <TextView
+                        android:id="@+id/tv_select_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:drawableRight="@drawable/ic_next"
+                        android:gravity="center|right"
+                        android:hint="请选择"
+                        android:text="自定义店铺"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_marginLeft="140dp"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:gravity="center|left"
+                android:text="@string/select_role"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16" />
+
+            <include layout="@layout/layout_line_horizontal" />
+
+            <com.zwx.scan.app.widget.MyListView
+                android:id="@+id/role_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!--<RelativeLayout
+                android:id="@+id/rl_psd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="密码"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14" />
+
+                <EditText
+                    android:id="@+id/edt_psd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_35"
+                    android:background="@color/white"
+                    android:hint="初始默认密码为123456"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color_gray"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:gravity="center|right"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"/>
+
+            </RelativeLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:gravity="center|left"
+                android:text="@string/select_store"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16" />
+
+            <include layout="@layout/layout_line_horizontal" />
+
+            <com.zwx.scan.app.widget.MyListView
+                android:id="@+id/store_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_70"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <include layout="@layout/layout_line_horizontal" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_48"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_50"
+    android:layout_marginRight="@dimen/margin_50"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_list_round_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:text="请选择店铺"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_16" />
+
+        <include layout="@layout/item_home_store_title" />
+
+      <!--  <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"/>
+            </RelativeLayout>
+        </ScrollView>-->
+
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fadingEdge="none"
+            android:fadeScrollbars="true"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10"/>
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+
+         </LinearLayout>-->
+
+        <!--  <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:descendantFocusability="blocksDescendants">
+
+              <android.support.v7.widget.RecyclerView
+                  android:id="@+id/rv_store"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:scrollbars="none"
+                  android:layout_marginTop="@dimen/margin_20"
+                  android:layout_marginBottom="@dimen/margin_20"
+                  android:layout_marginLeft="@dimen/margin_20"
+                  android:layout_marginRight="@dimen/margin_20"/>
+          </RelativeLayout>-->
+
+        <!--      <ListView
+                  android:id="@+id/list_view"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:scrollbars="vertical"/>-->
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_panda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_10"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_panda" />
+
+
+</RelativeLayout>

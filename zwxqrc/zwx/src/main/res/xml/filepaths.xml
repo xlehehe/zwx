@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="" name="camera_photos" />
+   <!-- <paths>
+        <files-path
+            name="my_images"
+            path="images/" />
+
+        <files-path
+            name="my_docs"
+            path="docs/" />
+    </paths>-->
+</paths>

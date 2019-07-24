@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|left"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_account_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="账号："
+                android:textColor="@color/account_manage_gray_color"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12345678234…"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/account_manage_blue_color"
+                android:textSize="@dimen/font_size_14"
+                android:layout_toRightOf="@id/tv_account_label"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|right"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_left_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_nickname"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:text="用户姓名："
+                android:textColor="@color/account_manage_gray_color"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="王大伟不伟……"
+                android:textColor="@color/account_manage_gray_color"
+                android:textSize="@dimen/font_size_14"
+                android:gravity="center|right"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+               />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_role"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50">
+
+        <TextView
+            android:id="@+id/tv_role_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="角色"
+            android:textColor="#909399"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/tv_role_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_role_label"
+            android:layout_centerInParent="true"
+            android:gravity="center|right"
+            android:text="收银员、店长、服务员、"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+
+
+    </RelativeLayout>
+    <include layout="@layout/layout_line_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50">
+
+        <TextView
+            android:id="@+id/tv_suoshudianpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="所属店铺："
+            android:textColor="#909399"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_suoshudianpu"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center|right"
+            android:text="董小姐洪楼店、董小姐世茂店、董小姐…"
+            android:textColor="@color/color_gray_dark"
+            android:textSize="@dimen/font_size_14" />
+
+
+    </RelativeLayout>
+</LinearLayout>

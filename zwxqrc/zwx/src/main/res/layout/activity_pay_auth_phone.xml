@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/divide_gray_color"
+    tools:context=".feature.personal.PayAuthPhoneActivity">
+
+    <include layout="@layout/layout_common_title"/>
+    <include layout="@layout/layout_line_horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="负责人姓名"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="180dp"
+                android:gravity="center|right"
+                android:hint=""
+                android:text="离散"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/layout_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="负责人手机号"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_100"
+                android:background="@color/white"
+                android:gravity="right|center"
+                android:hint="请输入负责人手机号"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:maxLines="1"
+
+                android:paddingLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="18615269385"
+                android:textColor="@color/font_color_gray"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/font_size_14"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_42"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:background="@drawable/shape_btn_blue_corner"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="更换手机号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+
+
+
+</LinearLayout>

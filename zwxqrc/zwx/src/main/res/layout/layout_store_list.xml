@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_like_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_1"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换店铺"
+        android:textColor="@color/color_gray_deep"
+        android:textSize="@dimen/font_size_14"
+        android:padding="@dimen/margin_10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    <ListView
+        android:id="@+id/lv_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label"/>
+
+
+</RelativeLayout>

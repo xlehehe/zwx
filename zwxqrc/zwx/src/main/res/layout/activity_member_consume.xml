@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title"/>
+
+    <include layout="@layout/layout_line_horizontal"/>
+
+    <com.zwx.library.tablayout.SlidingTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tl:tl_indicator_style="BLOCK"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="false"
+        tl:tl_textUnselectColor="@color/color_gray_deep"
+        tl:tl_textSelectColor="@color/btn_color_blue"
+        tl:tl_underline_color="@color/btn_color_blue"
+        tl:tl_indicator_color="@color/btn_color_blue"
+        tl:tl_indicator_height="1.5dp"
+        tl:tl_indicator_margin_left="@dimen/margin_5"
+        tl:tl_indicator_margin_right="@dimen/margin_5" />
+
+    <com.zwx.library.banner.view.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_1"/>
+</LinearLayout>

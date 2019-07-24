@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_avatar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_10">
+
+      <!--  <com.zwx.scan.app.widget.NiceImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="@dimen/height_80"
+            android:src="@drawable/ic_logo_default"
+            android:scaleType="fitXY"
+            app:corner_radius="10dp"
+            android:layout_gravity="center"/>-->
+        <!-- android:src="#80000000"-->
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+       <!-- <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转发活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"
+            android:layout_gravity="center"
+            android:gravity="center"/>-->
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/tv_campaign_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="明湖小楼粉丝会员卡"
+                    android:textColor="@color/color_gray_dark"
+                    android:textSize="@dimen/font_size_16"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:singleLine="false"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_campaign_type_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="活动类型："
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:paddingTop="@dimen/margin_5"/>
+                    <TextView
+                        android:id="@+id/tv_campaign_type"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+
+                        android:layout_marginBottom="@dimen/margin_10"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_campaign_time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="活动时间："
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:paddingTop="@dimen/margin_5"
+                        android:layout_marginBottom="@dimen/margin_15"/>
+                    <TextView
+                        android:id="@+id/tv_campaign_time"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text=""
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:paddingTop="@dimen/margin_5"
+
+                        android:layout_marginBottom="@dimen/margin_10"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center">
+               <!-- <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/shape_btn_blue_normal"
+                    android:layout_marginRight="@dimen/margin_10"/>-->
+                <ImageView
+                    android:id="@+id/iv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

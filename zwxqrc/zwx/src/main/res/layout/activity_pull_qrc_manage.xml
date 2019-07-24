@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.staffmanage.PullQrcManageActivity">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/ic_line_horizontal"
+        android:layout_below="@id/ll_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/line_top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="消息一"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="normal"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                />
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_one_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送类型"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="请选择"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_one_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_one_content_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送内容"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg_one_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="无"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="消息二"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="normal"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                />
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_two"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_two_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送类型"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_msg_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="请选择"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_two_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_two_content_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送内容"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg_two_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="无"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_label_left"
+                android:drawablePadding="@dimen/padding_10"
+                android:text="消息三"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="normal"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                />
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_three"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_three_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送类型"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="请选择"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line_horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_three_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40">
+                <TextView
+                    android:id="@+id/tv_msg_three_content_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择推送内容"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg_three_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="无"
+                    android:textSize="@dimen/font_size_14"
+                    android:textColor="@color/color_gray_deep"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/ic_next"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="90dp"/>
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line_horizontal"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/ic_line_horizontal"
+            android:layout_alignParentTop="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_10"
+
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_btn_blue_corner"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/btn_pre"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="@drawable/shape_btn_blue_stroke"
+                    android:text="预览"
+                    android:textColor="@color/color_campaign_btn"
+                    android:textSize="@dimen/font_size_16"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

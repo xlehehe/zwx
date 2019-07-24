@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="济南市董小姐经十路世贸广场店"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_dark"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"/>
+     <!--   <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15954103102"
+            android:hint=""
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_deep"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableRight="@drawable/ic_next"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"/>-->
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_zhiying"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store_manage"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_light"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15954103102"
+            android:hint=""
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_gray_dark"
+            android:layout_toRightOf="@id/lable"
+            android:layout_centerInParent="true"
+            android:gravity="center"/>
+           <TextView
+               android:id="@+id/tv_phone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="15954103102"
+               android:textSize="@dimen/font_size_14"
+               android:textColor="@color/font_color_blue"
+               android:layout_alignParentRight="true"
+               android:layout_centerInParent="true"
+               android:gravity="center"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

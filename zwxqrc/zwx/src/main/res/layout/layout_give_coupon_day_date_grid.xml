@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/dialog_confirm_cancel_util_bg">
+
+        <RelativeLayout
+            android:id="@+id/rv_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="@dimen/margin_10"
+            >
+
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="选择活动"
+                android:textColor="@color/pickerview_topbar_title"
+                android:textSize="@dimen/pickerview_topbar_title_textsize" />
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_clear_black"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.zwx.scan.app.widget.MyGridView
+            android:id="@+id/week_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:columnWidth="90dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:scrollbars="none"
+            android:listSelector="@android:color/transparent"
+            android:layout_marginBottom="@dimen/margin_10"/>
+<!--        <com.zwx.scan.app.widget.MyGridView
+            android:id="@+id/month_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="6"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:columnWidth="@dimen/height_30"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:scrollbars="none"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="#E2E8F0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent" >
+
+            <!-- 取消按钮 -->
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_confirm_cancel_util_left_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_left_btn"
+                android:textColor="#909399"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_confirm_cancel_util_left_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_right_btn"
+                android:textColor="@color/color_dialog_submit"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

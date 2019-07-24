@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/confirm_cancel_util_dialog_margin"
+        android:layout_marginRight="@dimen/confirm_cancel_util_dialog_margin"
+        android:background="@drawable/dialog_confirm_cancel_util_bg" >
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/margin_20"
+            android:text="库存调整"
+            android:textColor="@color/color_dialog_title"
+            android:textSize="@dimen/confirm_cancel_util_dialog_title_text_size"
+            android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+            android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding"
+            />
+        <!-- 标题下的中横线 -->
+        <TextView
+            android:id="@+id/delever_up_message"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:layout_marginRight="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:background="@color/confirm_cancel_util_dialog_delever_h_color"
+            android:visibility="invisible"/>
+        <!-- 内容 -->
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/title"
+            android:layout_marginBottom="@dimen/margin_5">
+            <RelativeLayout
+                android:id="@+id/rl_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+                <TextView
+                    android:id="@+id/tv_cur_stock_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="当前库存数："
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_cur_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="20"
+
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_cur_stock_label"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rg_stock"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="增加库存"
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+                    android:id="@+id/add_stock"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rb_lh_pt_selector"
+                    android:drawablePadding="@dimen/margin_10"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="减少库存"
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+                    android:id="@+id/reduce_stock"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rb_lh_pt_selector"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_30"/>
+            </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="right|top"
+                android:textColor="@color/color_dialog_title"
+                android:text="数量变化"
+                android:textSize="@dimen/confirm_cancel_util_dialog_message_text_size"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                />
+            <EditText
+                android:id="@+id/edt_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:gravity="left|top"
+                android:textColor="@color/confirm_cancel_util_dialog_message_color"
+                android:text=""
+                android:textSize="13dp"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:maxLength="6"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:numeric="integer"
+                android:maxLines="1"
+
+                android:background="@drawable/shape_campaign_edit_corner"
+                android:hint="请输入不超过6位的数字"/>
+
+        </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rl_update_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:layout_marginTop="@dimen/margin_5">
+                <TextView
+                    android:id="@+id/tv_update_stock_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="调整后库存数："
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_update_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="20"
+
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_update_stock_label"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!-- 底部按钮区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_message"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent" >
+
+            <!-- 取消按钮 -->
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_confirm_cancel_util_left_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_left_btn"
+                android:textColor="#909399"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_confirm_submit_util_right_btn_bg_white"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_right_btn"
+                android:textColor="@color/color_dialog_submit"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

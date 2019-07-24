@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.campaign.CampaignNewActivity">
+
+    <include layout="@layout/layout_common_title"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+
+    <include layout="@layout/layout_line_horizontal"
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_top"/>
+
+
+    <com.chanven.lib.cptr.PtrClassicFrameLayout
+        xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/recycler_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="700"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.8"
+        android:layout_below="@id/ll_line">
+     <!--   <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_margin="@dimen/margin_10"/>-->
+
+        <com.zwx.scan.app.widget.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:background="@color/white"
+               >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_20">
+                    <TextView
+                        android:id="@+id/tv_store_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/ic_label_left"
+                        android:drawablePadding="@dimen/padding_10"
+                        android:gravity="center|left"
+                        android:text="明湖小楼1号店铺"
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_14"
+                        />
+                    <TextView
+                        android:id="@+id/tv_select_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center|left"
+                        android:text="请选择店铺"
+                        android:textColor="@color/font_color_blue"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    >
+
+
+
+                    <Button
+                        android:id="@+id/btn_unpay"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:text="未交款项"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@drawable/shape_gray_corner"/>
+
+                    <Button
+                        android:id="@+id/btn_payed"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:text="已交款项"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_12"
+                        android:background="@drawable/shape_gray_corner"
+                        android:layout_marginLeft="@dimen/margin_20"/>
+                </LinearLayout>
+               <!-- <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    />-->
+
+                <com.zwx.scan.app.widget.MyListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:dividerHeight="18dp"/>
+            </LinearLayout>
+        </com.zwx.scan.app.widget.CustomScrollView>
+
+    </com.chanven.lib.cptr.PtrClassicFrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10">
+
+
+        <LinearLayout
+            android:id="@+id/ll_cb_total"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+            <CheckBox
+                android:id="@+id/cb_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_10"
+                android:clickable="false"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14"
+                android:button="@drawable/ic_gray_unselect"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/tv_cb_total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                android:textColor="@color/color_gray_deep"
+                android:textSize="@dimen/font_size_14"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_selected_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="合计："
+                android:textColor="@color/font_color_gray_dark"
+                android:textSize="@dimen/font_size_14"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/tv_selected_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥122.00"
+                android:textColor="@color/font_color_blue"
+                android:textSize="@dimen/font_size_14"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/tv_selected_count_label"
+                android:layout_centerInParent="true"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_btn_blue_corner"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/padding_10"
+            android:layout_marginTop="@dimen/margin_5"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/margin_20"
+        android:background="@drawable/dialog_confirm_cancel_util_bg" >
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/margin_20"
+            android:text="修改金额"
+            android:textColor="@color/color_dialog_title"
+            android:textSize="@dimen/confirm_cancel_util_dialog_title_text_size"
+            android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+            android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_clear"
+            android:layout_width="@dimen/height_30"
+            android:layout_height="@dimen/height_30"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_clear_gray"
+
+                />
+        </LinearLayout>
+
+
+
+        <!-- 标题下的中横线 -->
+        <TextView
+            android:id="@+id/delever_up_message"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:layout_marginRight="@dimen/confirm_cancel_util_dialog_delever_margin"
+            android:background="@color/confirm_cancel_util_dialog_delever_h_color"
+            android:visibility="invisible"/>
+        <!-- 内容 -->
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/title"
+            android:layout_marginBottom="@dimen/margin_5">
+            <RelativeLayout
+                android:id="@+id/rl_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+                <TextView
+                    android:id="@+id/tv_cur_stock_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="现有金额："
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_cur_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="0"
+
+                    android:singleLine="true"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_cur_stock_label"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_cur_amt_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="元"
+
+                    android:singleLine="true"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_cur_amt"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_banlance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20">
+                <TextView
+                    android:id="@+id/tv_banlance_after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="红包异动："
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="@dimen/margin_5"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rg_banlance"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingRight="@dimen/padding_20"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="追加金额"
+                        android:textColor="@color/color_dialog_title"
+                        android:textSize="@dimen/font_size_14"
+                        android:id="@+id/add_amt"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/rb_lh_pt_selector"
+                        android:drawablePadding="@dimen/margin_10"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扣除金额"
+                        android:textColor="@color/color_dialog_title"
+                        android:textSize="@dimen/font_size_14"
+                        android:id="@+id/reduce_amt"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/rb_lh_pt_selector"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right|top"
+                    android:textColor="@color/color_dialog_title"
+                    android:text="异动金额："
+
+                    android:textSize="@dimen/confirm_cancel_util_dialog_message_text_size"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    />
+                <EditText
+                    android:id="@+id/edt_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:gravity="center"
+                    android:textColor="@color/confirm_cancel_util_dialog_message_color"
+                    android:text=""
+                    android:textSize="13dp"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:digits="0123456789."
+                    android:numeric="integer"
+                    android:maxLines="1"
+
+                    android:background="@drawable/shape_campaign_edit_corner"
+                    android:hint="请输入金额"/>
+                <TextView
+                    android:id="@+id/tv_amt_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="元"
+
+                    android:singleLine="true"
+                    android:textColor="@color/color_gray_deep"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_cur_amt"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_reason_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right|top"
+                    android:textColor="@color/color_dialog_title"
+                    android:text="异动原因："
+
+                    android:textSize="@dimen/confirm_cancel_util_dialog_message_text_size"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@drawable/ic_edt_round_bg"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/tv_reason_label">
+
+                    <EditText
+                        android:id="@+id/edt_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="请填写异动原因…"
+                        android:maxLength="500"
+                        android:maxLines="10"
+                        android:minLines="3"
+                        android:inputType="textMultiLine|text"
+                        android:nextFocusForward="@id/edt_remark"
+                        android:paddingLeft="@dimen/margin_5"
+
+                        android:paddingRight="@dimen/margin_5"
+                        android:text=""
+                        android:textColor="@color/color_gray_dark"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_product_remark_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:paddingRight="@dimen/margin_15"
+                        android:text="(0/30)"
+                        android:textColor="#8E939A"
+                        android:textSize="@dimen/font_size_12" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_update_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:layout_marginTop="@dimen/margin_5">
+                <TextView
+                    android:id="@+id/tv_update_stock_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="异动后金额："
+                    android:textColor="@color/color_dialog_title"
+                    android:textSize="@dimen/font_size_14"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_update_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="20"
+
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_update_stock_label"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_update_amt_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="元"
+
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_blue"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_toRightOf="@id/tv_update_amt"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!-- 底部按钮区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_message"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent" >
+
+            <!-- 取消按钮 -->
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_confirm_cancel_util_left_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_left_btn"
+                android:textColor="#909399"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_confirm_submit_util_right_btn_bg_white"
+                android:gravity="center"
+                android:text="@string/confirm_cancel_right_btn"
+                android:textColor="@color/color_dialog_submit"
+                android:textSize="@dimen/confirm_cancel_util_dialog_btn_text_size"
+                android:paddingTop="@dimen/confirm_cancel_util_dialog_title_padding"
+                android:paddingBottom="@dimen/confirm_cancel_util_dialog_title_padding" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

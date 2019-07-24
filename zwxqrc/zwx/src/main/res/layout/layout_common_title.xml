@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_40"
+        android:gravity="center|left"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back_black"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_store"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/margin_5"
+            android:drawableRight="@drawable/ic_down"
+            android:padding="@dimen/margin_10"
+            android:text="请选择店铺"
+            android:textSize="@dimen/font_size_16"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/font_color_gray_dark"
+            android:layout_gravity="left|center"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_48"
+        android:text="趣管家"
+        android:textSize="@dimen/font_size_20"
+        android:textColor="@color/font_color_gray"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_40"
+        android:gravity="center|left"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:layout_marginRight="@dimen/margin_15"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/margin_10"
+            android:padding="@dimen/margin_10"
+            android:text=""
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/btn_color_blue"
+            android:layout_gravity="left|center"
+            android:visibility="gone"
+            android:paddingRight="@dimen/margin_10"/>
+
+
+    </LinearLayout>
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@mipmap/ic_line_horizontal" />-->
+</RelativeLayout>

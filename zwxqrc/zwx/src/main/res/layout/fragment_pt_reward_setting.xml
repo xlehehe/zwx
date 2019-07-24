@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zwx.scan.app.feature.campaign.LaohuPinTuanNextTwoFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_prize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zwx.scan.app.widget.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_below="@id/step_view_two">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="会员成功组团后，想要奖励给拼团的会员什么优惠券"
+                        android:textColor="@color/color_gray_deep"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_marginBottom="@dimen/margin_10"/>
+                    <!--  <TextView
+                          android:id="@+id/tv_title_content"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="2、会员转发后(转发者)，赠送优惠券设置"
+                          android:textColor="@color/color_gray_dark"
+                          android:textSize="@dimen/font_size_14"
+                          android:layout_below="@id/ll_top"
+                          android:paddingLeft="@dimen/margin_10"/>-->
+                    <LinearLayout
+                        android:id="@+id/ll_add_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_lh_ge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_pt_reward_setting_panda"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_marginLeft="@dimen/margin_20"/>
+
+                        <Button
+                            android:id="@+id/btn_add_coupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_50"
+                            android:layout_marginLeft="@dimen/margin_40"
+                            android:layout_marginRight="@dimen/margin_40"
+                            android:background="@drawable/shape_btn_blue_corner"
+                            android:layout_marginTop="@dimen/margin_40"
+                            android:text="添加优惠券"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_16"/>
+
+                    </LinearLayout>
+
+                    <!--优惠券-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bottom_coupon_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            >
+
+                            <com.zwx.library.banner.view.CustomViewPager
+                                android:id="@+id/coupon_view_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:paddingRight="@dimen/margin_15"
+                                android:paddingLeft="@dimen/margin_15"
+                                android:clipToPadding="false"/>
+                            <!-- <com.zwx.scan.app.widget.LoopViewPager
+                                 android:id="@+id/view_pager"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="100dp"
+                                 android:paddingRight="@dimen/margin_15"
+                                 android:paddingLeft="@dimen/margin_15"
+                                 android:clipToPadding="false"/>-->
+
+                            <LinearLayout
+                                android:id="@+id/dots"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="@dimen/margin_10"
+                                android:layout_below="@+id/coupon_view_pager">
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <!-- <include layout="@layout/layout_campaign_coupon_edit"/>-->
+                        <com.zwx.scan.app.widget.NoScrollViewPager
+                            android:id="@+id/setting_view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.zwx.scan.app.widget.CustomScrollView>
+    </LinearLayout>
+
+    <!--<include layout="@layout/fragment_laohu_pin_tuan_next_un_prize"/>-->
+
+    <LinearLayout
+        android:id="@+id/ll_un_prize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="如果需要设置多个数量奖项，请在编辑中进行增减"
+            android:textColor="@color/color_gray_deep"
+            android:textSize="@dimen/font_size_14"
+            android:paddingTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawablePadding="@dimen/margin_10"/>
+
+        <include layout="@layout/layout_line_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/ll_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当会员未中奖时，你想用什么图片展示出来"
+                android:textColor="@color/color_gray_light"
+                android:textSize="@dimen/font_size_14"
+
+                android:layout_marginBottom="@dimen/margin_10"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:overScrollMode="never"
+                    android:layout_toLeftOf="@id/tv_photo_num"/>
+
+                <TextView
+                    android:id="@+id/tv_photo_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1/6)"
+                    android:textColor="@color/color_gray_light"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/rv_photo"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="注：当会员未中奖时，游戏中将展示，这里设置的图片"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/font_size_12"
+
+                android:layout_marginBottom="@dimen/margin_10"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin_10"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
