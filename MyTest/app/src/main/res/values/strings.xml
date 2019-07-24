@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">兑分期演示</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+</resources>

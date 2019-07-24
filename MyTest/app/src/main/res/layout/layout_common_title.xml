@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/status_color">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center|left"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_btn_message_n"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+
+
+   <!-- <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_48"
+        android:text="趣管家"
+        android:textSize="@dimen/font_size_20"
+        android:textColor="@color/font_color_gray"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:singleLine="true"
+        android:ellipsize="end"/>-->
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_campaign_edit_corner">
+
+        <TextView
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_campaign_edit_corner"
+            android:drawableLeft="@drawable/home_btn_search"
+            android:drawablePadding="10dp"
+            android:hint="5月1日全场免息日 "
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:gravity="center|left"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center|left"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_shop_cart"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_gravity="left|center"
+            android:visibility="gone"
+            android:paddingRight="10dp"/>
+
+
+    </LinearLayout>
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@mipmap/ic_line_horizontal" />-->
+</RelativeLayout>

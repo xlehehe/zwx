@@ -1,0 +1,111 @@
+def supportVersion = "28.0.0"
+def rxBindingVersion = "2.2.0"
+def rxAndroidVersion = "2.1.0"
+def rxJavaVersion = "2.2.3"
+def retrofitVersion = "2.4.0"
+def okHttpVersion = "3.11.0"
+def stethoVersion = "1.5.0"
+def butterKnifeVersion = "8.8.1"
+def daggerVersion = "2.16"
+//def ormLiteVersion = "5.1"
+//def fastJsonVersion = "1.2.49"
+def glideVersion = "4.8.0";  //java 1.8暂不支持
+//def easypermissionsVersion = "1.0.1";
+def constraintVersion  = "1.1.3";
+
+def rxlifecycleVersion = "2.2.1"
+//def rxlifecycleAndroidVersion = "2.2.1"
+//def rxlifecycle_components = "2.2.1"
+def eventBusVersion = '3.1.1'
+
+def leakCanaryVersion = "1.6.1"
+def blockCanaryVersion = "1.5.0"
+def fragmentationVersion = "1.0.1";
+def junitVersion = "4.12"
+def fastJsonVersion = "1.1.60.android"
+project.ext{
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            applicationId    : "com.zwx.instalment.app",
+            minSdkVersion    : 16,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.1"
+    ]
+
+    config = [
+            "support-v4"                  : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"                : "com.android.support:appcompat-v7:${supportVersion}",
+            "design"                      : "com.android.support:design:${supportVersion}",
+            "recyclerview"                : "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview"                    : "com.android.support:cardview-v7:${supportVersion}",
+            "constraint-layout"           :"com.android.support.constraint:constraint-layout:${constraintVersion}",
+            // "constraintlayout"           :"androidx.constraintlayout:constraintlayout:${constraintVersion}",
+
+            //java8-support
+//            "stream"                      : "com.annimon:stream:1.0.8",
+            //com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:2.1.1
+            //rx
+            "rxjava"                      : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            "rxandroid"                   : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            "rxbinding"                   : "com.jakewharton.rxbinding2:rxbinding:${rxBindingVersion}",
+
+            //retrofit
+            "retrofit"                    : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "adapter-rxjava"              : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            "retrofit-converters"         : "com.squareup.retrofit2:retrofit-converters:${retrofitVersion}",
+            "converter-gson"              : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            //dagger
+            "dagger"                      : "com.google.dagger:dagger:${daggerVersion}",
+            "dagger-compiler"             : "com.google.dagger:dagger-compiler:${daggerVersion}",
+
+            //facebook
+            "stetho"                      : "com.facebook.stetho:stetho:${stethoVersion}",
+            "stetho-okhttp3"              : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+
+
+            //others
+            "logging-interceptor" : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            "butterknife"                 : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            "butterknife-compiler"        : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+
+            "glide"                       : "com.github.bumptech.glide:glide:${glideVersion}",
+            "glide-compiler"              :"com.github.bumptech.glide:compiler:${glideVersion}",
+//            "easypermissions"             : "pub.devrel:easypermissions:${easypermissionsVersion}",
+            //权限
+            "rxpermissions"               :"com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+
+            "zxing"                       :"com.google.zxing:core:3.3.3",
+//            "gson"                         :"com.google.code.gson:gson:2.8.5",
+            "support-vector-drawable"       :"com.android.support:support-vector-drawable:$supportVersion",
+
+
+            //rxlife
+            "rxlifecycle"                   :"com.trello.rxlifecycle2:rxlifecycle:$rxlifecycleVersion",
+            "rxlifecycle-android"           :"com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycleVersion",
+            "rxlifecycle-components"        :"com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycleVersion",
+
+            //事件调度
+            "eventbus"                      :"org.greenrobot:eventbus:$eventBusVersion",
+
+            //检测内存泄漏
+            "leakcanary"                    : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            "leakcanary-release"             :"com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+            //检测UI卡顿
+            "blockCanaryDebug"              :"com.github.markzhai:blockcanary-android:${blockCanaryVersion}",
+            "blockCanaryRelease"            :"com.github.markzhai:blockcanary-no-op:${blockCanaryVersion}",
+
+
+            "fragmentation"                    :"me.yokeyword:fragmentationx:$fragmentationVersion",
+            // Swipeback is based on fragmentation. Refer to SwipeBackActivity/Fragment for your Customized SupportActivity/Fragment
+            "fragmentation"                   :"me.yokeyword:fragmentationx-swipeback:$fragmentationVersion",
+            "fastjson"                        : "com.alibaba:fastjson:${fastJsonVersion}",
+            "junit"                         :"junit:junit:${junitVersion}",
+
+
+    ]
+
+
+
+}
